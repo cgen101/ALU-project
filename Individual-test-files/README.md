@@ -1,11 +1,15 @@
-# Explanartion of this directory
+# Explanation of This Directory
 
-## nand_gate.v: file with nand_gate module. I had to add inclusion guards to resolve the error
-## nand_tb.v: testing file for nand_gate module. Dumps info for wave form into nand_tb.vcd 
-## nand_test: file producued by command: iverilog -o nand_test nand_gate.v nand_tb.v
-### -Once this file is produced, I ran command: vvp nand_test 
-###  to run the simulation, which produceds the .vcd file. 
-## nand_tb.vcd: waveform data file produced by simulation 
+## Files
 
-## Here is the waveform image produced when I ran command: gtkwave nand_tb.vcd
-![My Image](nand_wave.png)
+- **nand_gate.v**: Contains the `nand_gate` module. Inclusion guards were added to resolve errors.
+- **nand_tb.v**: Testing file for the `nand_gate` module. Dumps information for waveform into `nand_tb.vcd`.
+- **nand_test**: File produced by the command `iverilog -o nand_test nand_gate.v nand_tb.v`.
+  - Once this file is produced, run the command `vvp nand_test` to execute the simulation, which generates the `.vcd` file.
+- **nand_tb.vcd**: Waveform data file produced by the simulation.
+
+## Waveform Image
+
+Here is the waveform image produced when I ran the command `gtkwave nand_tb.vcd`:
+
+![Waveform Image](nand_wave.png)
