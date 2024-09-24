@@ -1,0 +1,58 @@
+#! /opt/homebrew/Cellar/icarus-verilog/12.0/bin/vvp
+:ivl_version "12.0 (stable)";
+:ivl_delay_selection "TYPICAL";
+:vpi_time_precision - 9;
+:vpi_module "/opt/homebrew/Cellar/icarus-verilog/12.0/lib/ivl/system.vpi";
+:vpi_module "/opt/homebrew/Cellar/icarus-verilog/12.0/lib/ivl/vhdl_sys.vpi";
+:vpi_module "/opt/homebrew/Cellar/icarus-verilog/12.0/lib/ivl/vhdl_textio.vpi";
+:vpi_module "/opt/homebrew/Cellar/icarus-verilog/12.0/lib/ivl/v2005_math.vpi";
+:vpi_module "/opt/homebrew/Cellar/icarus-verilog/12.0/lib/ivl/va_math.vpi";
+S_0x136904170 .scope module, "nor_tb" "nor_tb" 2 4;
+ .timescale -9 -9;
+v0x136914810_0 .var "A", 0 0;
+v0x1369148b0_0 .var "B", 0 0;
+v0x136914960_0 .net "Y", 0 0, L_0x136914b60;  1 drivers
+S_0x1369042f0 .scope module, "uut" "nor_gate" 2 9, 3 4 0, S_0x136904170;
+ .timescale 0 0;
+    .port_info 0 /OUTPUT 1 "Y";
+    .port_info 1 /INPUT 1 "A";
+    .port_info 2 /INPUT 1 "B";
+L_0x136914a30 .functor OR 1, v0x136914810_0, v0x1369148b0_0, C4<0>, C4<0>;
+v0x136904510_0 .net "A", 0 0, v0x136914810_0;  1 drivers
+v0x1369145c0_0 .net "B", 0 0, v0x1369148b0_0;  1 drivers
+v0x136914660_0 .net "Y", 0 0, L_0x136914b60;  alias, 1 drivers
+v0x136914710_0 .net *"_ivl_0", 0 0, L_0x136914a30;  1 drivers
+L_0x136914b60 .reduce/nor L_0x136914a30;
+    .scope S_0x136904170;
+T_0 ;
+    %vpi_call 2 13 "$dumpfile", "nor_tb.vcd" {0 0 0};
+    %vpi_call 2 14 "$dumpvars", 32'sb00000000000000000000000000000000, S_0x136904170 {0 0 0};
+    %pushi/vec4 0, 0, 1;
+    %store/vec4 v0x136914810_0, 0, 1;
+    %pushi/vec4 0, 0, 1;
+    %store/vec4 v0x1369148b0_0, 0, 1;
+    %delay 10, 0;
+    %pushi/vec4 0, 0, 1;
+    %store/vec4 v0x136914810_0, 0, 1;
+    %pushi/vec4 1, 0, 1;
+    %store/vec4 v0x1369148b0_0, 0, 1;
+    %delay 10, 0;
+    %pushi/vec4 1, 0, 1;
+    %store/vec4 v0x136914810_0, 0, 1;
+    %pushi/vec4 0, 0, 1;
+    %store/vec4 v0x1369148b0_0, 0, 1;
+    %delay 10, 0;
+    %pushi/vec4 1, 0, 1;
+    %store/vec4 v0x136914810_0, 0, 1;
+    %pushi/vec4 1, 0, 1;
+    %store/vec4 v0x1369148b0_0, 0, 1;
+    %delay 10, 0;
+    %vpi_call 2 32 "$display", "Testing nor" {0 0 0};
+    %end;
+    .thread T_0;
+# The file index is used to find the file name in the following table.
+:file_names 4;
+    "N/A";
+    "<interactive>";
+    "nor_tb.v";
+    "nor_gate.v";
