@@ -1,0 +1,44 @@
+$date
+	Tue Sep 24 17:25:36 2024
+$end
+$version
+	Icarus Verilog
+$end
+$timescale
+	1ns
+$end
+$scope module shift_tb $end
+$var wire 4 ! Y [3:0] $end
+$var reg 4 " A [3:0] $end
+$scope module uut $end
+$var wire 4 # A [3:0] $end
+$var wire 4 $ Y [3:0] $end
+$upscope $end
+$upscope $end
+$enddefinitions $end
+$comment Show the parameter values. $end
+$dumpall
+$end
+#0
+$dumpvars
+b0 $
+b0 #
+b0 "
+b0 !
+$end
+#10
+b10 !
+b10 $
+b1 "
+b1 #
+#20
+b100 !
+b100 $
+b10 "
+b10 #
+#30
+b1110 !
+b1110 $
+b1111 "
+b1111 #
+#40
