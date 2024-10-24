@@ -7,7 +7,7 @@ endmodule
 module nand_gate (Y, A, B);
     output Y; 
     input A, B; 
-    assign Y= !(A & B);
+    assign Y= !(A && B);
 endmodule
 
 module nor_gate (Y, A, B);
