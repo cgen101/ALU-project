@@ -1,4 +1,4 @@
-`ifndef NAND-GATE_V
+`ifndef NAND_GATE_V
 `define NAND_GATE_V
 
 module nand_gate (Y, A, B);
