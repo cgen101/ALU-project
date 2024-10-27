@@ -1,0 +1,78 @@
+#! /opt/homebrew/Cellar/icarus-verilog/12.0/bin/vvp
+:ivl_version "12.0 (stable)";
+:ivl_delay_selection "TYPICAL";
+:vpi_time_precision - 9;
+:vpi_module "/opt/homebrew/Cellar/icarus-verilog/12.0/lib/ivl/system.vpi";
+:vpi_module "/opt/homebrew/Cellar/icarus-verilog/12.0/lib/ivl/vhdl_sys.vpi";
+:vpi_module "/opt/homebrew/Cellar/icarus-verilog/12.0/lib/ivl/vhdl_textio.vpi";
+:vpi_module "/opt/homebrew/Cellar/icarus-verilog/12.0/lib/ivl/v2005_math.vpi";
+:vpi_module "/opt/homebrew/Cellar/icarus-verilog/12.0/lib/ivl/va_math.vpi";
+S_0x122704b70 .scope module, "xnor_tb_32bit" "xnor_tb_32bit" 2 4;
+ .timescale -9 -9;
+v0x1226195e0_0 .var "A", 31 0;
+v0x1226196b0_0 .var "B", 31 0;
+v0x122619760_0 .net "Y", 31 0, L_0x122619960;  1 drivers
+S_0x122704ce0 .scope module, "uut" "xnor_gate_32bit" 2 10, 3 4 0, S_0x122704b70;
+ .timescale 0 0;
+    .port_info 0 /OUTPUT 32 "Y";
+    .port_info 1 /INPUT 32 "A";
+    .port_info 2 /INPUT 32 "B";
+L_0x122619830 .functor XOR 32, v0x1226195e0_0, v0x1226196b0_0, C4<00000000000000000000000000000000>, C4<00000000000000000000000000000000>;
+L_0x122619960 .functor NOT 32, L_0x122619830, C4<00000000000000000000000000000000>, C4<00000000000000000000000000000000>, C4<00000000000000000000000000000000>;
+v0x122704ea0_0 .net "A", 31 0, v0x1226195e0_0;  1 drivers
+v0x122619360_0 .net "B", 31 0, v0x1226196b0_0;  1 drivers
+v0x122619420_0 .net "Y", 31 0, L_0x122619960;  alias, 1 drivers
+v0x1226194e0_0 .net *"_ivl_0", 31 0, L_0x122619830;  1 drivers
+    .scope S_0x122704b70;
+T_0 ;
+    %vpi_call 2 18 "$dumpfile", "xnor_tb_32bit.vcd" {0 0 0};
+    %vpi_call 2 19 "$dumpvars", 32'sb00000000000000000000000000000000, S_0x122704b70 {0 0 0};
+    %pushi/vec4 0, 0, 32;
+    %store/vec4 v0x1226195e0_0, 0, 32;
+    %pushi/vec4 0, 0, 32;
+    %store/vec4 v0x1226196b0_0, 0, 32;
+    %delay 10, 0;
+    %pushi/vec4 4294967295, 0, 32;
+    %store/vec4 v0x1226195e0_0, 0, 32;
+    %pushi/vec4 4294967295, 0, 32;
+    %store/vec4 v0x1226196b0_0, 0, 32;
+    %delay 10, 0;
+    %pushi/vec4 2863311530, 0, 32;
+    %store/vec4 v0x1226195e0_0, 0, 32;
+    %pushi/vec4 1431655765, 0, 32;
+    %store/vec4 v0x1226196b0_0, 0, 32;
+    %delay 10, 0;
+    %pushi/vec4 4042322160, 0, 32;
+    %store/vec4 v0x1226195e0_0, 0, 32;
+    %pushi/vec4 4042322160, 0, 32;
+    %store/vec4 v0x1226196b0_0, 0, 32;
+    %delay 10, 0;
+    %pushi/vec4 252645135, 0, 32;
+    %store/vec4 v0x1226195e0_0, 0, 32;
+    %pushi/vec4 4042322160, 0, 32;
+    %store/vec4 v0x1226196b0_0, 0, 32;
+    %delay 10, 0;
+    %pushi/vec4 858993459, 0, 32;
+    %store/vec4 v0x1226195e0_0, 0, 32;
+    %pushi/vec4 858993459, 0, 32;
+    %store/vec4 v0x1226196b0_0, 0, 32;
+    %delay 10, 0;
+    %pushi/vec4 1010580540, 0, 32;
+    %store/vec4 v0x1226195e0_0, 0, 32;
+    %pushi/vec4 3284386755, 0, 32;
+    %store/vec4 v0x1226196b0_0, 0, 32;
+    %delay 10, 0;
+    %pushi/vec4 305419896, 0, 32;
+    %store/vec4 v0x1226195e0_0, 0, 32;
+    %pushi/vec4 2271560481, 0, 32;
+    %store/vec4 v0x1226196b0_0, 0, 32;
+    %delay 10, 0;
+    %vpi_call 2 30 "$display", "Testing xnor" {0 0 0};
+    %end;
+    .thread T_0;
+# The file index is used to find the file name in the following table.
+:file_names 4;
+    "N/A";
+    "<interactive>";
+    "xnor_tb_32bit.v";
+    "xnor_gate_32bit.v";
