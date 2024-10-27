@@ -1,5 +1,5 @@
 $date
-	Sun Oct 27 10:39:30 2024
+	Sun Oct 27 11:46:18 2024
 $end
 $version
 	Icarus Verilog
@@ -7,7 +7,7 @@ $end
 $timescale
 	1ns
 $end
-$scope module multiplier_tb $end
+$scope module multiplication_tb $end
 $var wire 4 ! product_low [3:0] $end
 $var wire 4 " product_high [3:0] $end
 $var reg 4 # A [3:0] $end

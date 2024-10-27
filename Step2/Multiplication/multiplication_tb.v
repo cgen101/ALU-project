@@ -1,7 +1,7 @@
 `timescale 1ns / 1ns
 `include "multiplication.v"
 
-module multiplier_tb;
+module multiplication_tb;
 
     reg [3:0] A, B;
     wire [3:0] product_low;
@@ -15,8 +15,8 @@ module multiplier_tb;
     );
 
     initial begin
-        $dumpfile("multiplier_tb.vcd");
-        $dumpvars(0, multiplier_tb);
+        $dumpfile("multiplication_tb.vcd");
+        $dumpvars(0, multiplication_tb);
 
         A = 4'b0010; B = 4'b0011; #10;  
         $display("A = %b, B = %b, product_low = %b, product_high = %b", A, B, product_low, product_high);
