@@ -1,0 +1,78 @@
+#! /opt/homebrew/Cellar/icarus-verilog/12.0/bin/vvp
+:ivl_version "12.0 (stable)";
+:ivl_delay_selection "TYPICAL";
+:vpi_time_precision - 9;
+:vpi_module "/opt/homebrew/Cellar/icarus-verilog/12.0/lib/ivl/system.vpi";
+:vpi_module "/opt/homebrew/Cellar/icarus-verilog/12.0/lib/ivl/vhdl_sys.vpi";
+:vpi_module "/opt/homebrew/Cellar/icarus-verilog/12.0/lib/ivl/vhdl_textio.vpi";
+:vpi_module "/opt/homebrew/Cellar/icarus-verilog/12.0/lib/ivl/v2005_math.vpi";
+:vpi_module "/opt/homebrew/Cellar/icarus-verilog/12.0/lib/ivl/va_math.vpi";
+S_0x135f06100 .scope module, "xnor_tb_16bit" "xnor_tb_16bit" 2 4;
+ .timescale -9 -9;
+v0x135f1c790_0 .var "A", 15 0;
+v0x135f1c840_0 .var "B", 15 0;
+v0x135f1c8f0_0 .net "Y", 15 0, L_0x135f1caf0;  1 drivers
+S_0x135f06270 .scope module, "uut" "xnor_gate_16bit" 2 10, 3 4 0, S_0x135f06100;
+ .timescale 0 0;
+    .port_info 0 /OUTPUT 16 "Y";
+    .port_info 1 /INPUT 16 "A";
+    .port_info 2 /INPUT 16 "B";
+L_0x135f1c9c0 .functor XOR 16, v0x135f1c790_0, v0x135f1c840_0, C4<0000000000000000>, C4<0000000000000000>;
+L_0x135f1caf0 .functor NOT 16, L_0x135f1c9c0, C4<0000000000000000>, C4<0000000000000000>, C4<0000000000000000>;
+v0x135f0ac10_0 .net "A", 15 0, v0x135f1c790_0;  1 drivers
+v0x135f1c520_0 .net "B", 15 0, v0x135f1c840_0;  1 drivers
+v0x135f1c5d0_0 .net "Y", 15 0, L_0x135f1caf0;  alias, 1 drivers
+v0x135f1c690_0 .net *"_ivl_0", 15 0, L_0x135f1c9c0;  1 drivers
+    .scope S_0x135f06100;
+T_0 ;
+    %vpi_call 2 18 "$dumpfile", "xnor_tb_16bit.vcd" {0 0 0};
+    %vpi_call 2 19 "$dumpvars", 32'sb00000000000000000000000000000000, S_0x135f06100 {0 0 0};
+    %pushi/vec4 0, 0, 16;
+    %store/vec4 v0x135f1c790_0, 0, 16;
+    %pushi/vec4 0, 0, 16;
+    %store/vec4 v0x135f1c840_0, 0, 16;
+    %delay 10, 0;
+    %pushi/vec4 65535, 0, 16;
+    %store/vec4 v0x135f1c790_0, 0, 16;
+    %pushi/vec4 65535, 0, 16;
+    %store/vec4 v0x135f1c840_0, 0, 16;
+    %delay 10, 0;
+    %pushi/vec4 43690, 0, 16;
+    %store/vec4 v0x135f1c790_0, 0, 16;
+    %pushi/vec4 21845, 0, 16;
+    %store/vec4 v0x135f1c840_0, 0, 16;
+    %delay 10, 0;
+    %pushi/vec4 61680, 0, 16;
+    %store/vec4 v0x135f1c790_0, 0, 16;
+    %pushi/vec4 61680, 0, 16;
+    %store/vec4 v0x135f1c840_0, 0, 16;
+    %delay 10, 0;
+    %pushi/vec4 3855, 0, 16;
+    %store/vec4 v0x135f1c790_0, 0, 16;
+    %pushi/vec4 61680, 0, 16;
+    %store/vec4 v0x135f1c840_0, 0, 16;
+    %delay 10, 0;
+    %pushi/vec4 13107, 0, 16;
+    %store/vec4 v0x135f1c790_0, 0, 16;
+    %pushi/vec4 13107, 0, 16;
+    %store/vec4 v0x135f1c840_0, 0, 16;
+    %delay 10, 0;
+    %pushi/vec4 15420, 0, 16;
+    %store/vec4 v0x135f1c790_0, 0, 16;
+    %pushi/vec4 50115, 0, 16;
+    %store/vec4 v0x135f1c840_0, 0, 16;
+    %delay 10, 0;
+    %pushi/vec4 4660, 0, 16;
+    %store/vec4 v0x135f1c790_0, 0, 16;
+    %pushi/vec4 17185, 0, 16;
+    %store/vec4 v0x135f1c840_0, 0, 16;
+    %delay 10, 0;
+    %vpi_call 2 31 "$display", "Testing xnor 16 bit" {0 0 0};
+    %end;
+    .thread T_0;
+# The file index is used to find the file name in the following table.
+:file_names 4;
+    "N/A";
+    "<interactive>";
+    "xnor_tb_16bit.v";
+    "xnor_gate_16bit.v";
