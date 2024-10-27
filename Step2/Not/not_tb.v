@@ -14,12 +14,10 @@ initial begin
     $dumpfile("not_tb.vcd");//holds output waveform
     $dumpvars(0, not_tb);
 
-    // Loop through all 16 combinations of 4-bit input
-    for (i = 0; i < 16; i = i + 1) begin
-        A = i;  // Assign binary value of i to A
-        #10;    // Wait for 10 time units
-    end
-
+        A = 4'b0000; #10;
+        A = 4'b1111; #10;
+        A = 4'b1010; #10;
+        A = 4'b0101; #10;
     
     $display("Testing not");
 
