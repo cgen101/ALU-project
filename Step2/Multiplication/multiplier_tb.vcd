@@ -1,0 +1,74 @@
+$date
+	Sun Oct 27 10:39:30 2024
+$end
+$version
+	Icarus Verilog
+$end
+$timescale
+	1ns
+$end
+$scope module multiplier_tb $end
+$var wire 4 ! product_low [3:0] $end
+$var wire 4 " product_high [3:0] $end
+$var reg 4 # A [3:0] $end
+$var reg 4 $ B [3:0] $end
+$scope module uut $end
+$var wire 4 % A [3:0] $end
+$var wire 4 & B [3:0] $end
+$var wire 4 ' product_low [3:0] $end
+$var wire 4 ( product_high [3:0] $end
+$var wire 8 ) full_product [7:0] $end
+$upscope $end
+$upscope $end
+$enddefinitions $end
+#0
+$dumpvars
+b110 )
+b0 (
+b110 '
+b11 &
+b10 %
+b11 $
+b10 #
+b0 "
+b110 !
+$end
+#10
+b1 "
+b1 (
+b1001 !
+b1001 '
+b101 $
+b101 &
+b11001 )
+b101 #
+b101 %
+#20
+b10 !
+b10 '
+b11 $
+b11 &
+b10010 )
+b110 #
+b110 %
+#30
+b10 "
+b10 (
+b100 !
+b100 '
+b100 $
+b100 &
+b100100 )
+b1001 #
+b1001 %
+#40
+b1 !
+b1 '
+b1110 "
+b1110 (
+b1111 $
+b1111 &
+b11100001 )
+b1111 #
+b1111 %
+#50
