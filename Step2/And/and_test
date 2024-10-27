@@ -1,0 +1,69 @@
+#! /usr/bin/vvp
+:ivl_version "11.0 (stable)";
+:ivl_delay_selection "TYPICAL";
+:vpi_time_precision - 9;
+:vpi_module "/usr/lib/x86_64-linux-gnu/ivl/system.vpi";
+:vpi_module "/usr/lib/x86_64-linux-gnu/ivl/vhdl_sys.vpi";
+:vpi_module "/usr/lib/x86_64-linux-gnu/ivl/vhdl_textio.vpi";
+:vpi_module "/usr/lib/x86_64-linux-gnu/ivl/v2005_math.vpi";
+:vpi_module "/usr/lib/x86_64-linux-gnu/ivl/va_math.vpi";
+S_0x55d2705baf60 .scope module, "and_tb" "and_tb" 2 4;
+ .timescale -9 -9;
+v0x55d2705cead0_0 .var "A", 3 0;
+v0x55d2705cebc0_0 .var "B", 3 0;
+v0x55d2705cec90_0 .net "Y", 3 0, L_0x55d2705cef60;  1 drivers
+v0x55d2705ced90_0 .var/i "i", 31 0;
+v0x55d2705cee30_0 .var/i "j", 31 0;
+S_0x55d2705bb0f0 .scope module, "uut" "and_gate" 2 9, 3 4 0, S_0x55d2705baf60;
+ .timescale 0 0;
+    .port_info 0 /OUTPUT 4 "Y";
+    .port_info 1 /INPUT 4 "A";
+    .port_info 2 /INPUT 4 "B";
+L_0x55d2705cef60 .functor AND 4, v0x55d2705cead0_0, v0x55d2705cebc0_0, C4<1111>, C4<1111>;
+v0x55d270583ba0_0 .net "A", 3 0, v0x55d2705cead0_0;  1 drivers
+v0x55d2705ce8b0_0 .net "B", 3 0, v0x55d2705cebc0_0;  1 drivers
+v0x55d2705ce990_0 .net "Y", 3 0, L_0x55d2705cef60;  alias, 1 drivers
+    .scope S_0x55d2705baf60;
+T_0 ;
+    %vpi_call 2 14 "$dumpfile", "and_tb.vcd" {0 0 0};
+    %vpi_call 2 15 "$dumpvars", 32'sb00000000000000000000000000000000, S_0x55d2705baf60 {0 0 0};
+    %pushi/vec4 0, 0, 32;
+    %store/vec4 v0x55d2705ced90_0, 0, 32;
+T_0.0 ;
+    %load/vec4 v0x55d2705ced90_0;
+    %cmpi/s 16, 0, 32;
+    %jmp/0xz T_0.1, 5;
+    %pushi/vec4 0, 0, 32;
+    %store/vec4 v0x55d2705cee30_0, 0, 32;
+T_0.2 ;
+    %load/vec4 v0x55d2705cee30_0;
+    %cmpi/s 16, 0, 32;
+    %jmp/0xz T_0.3, 5;
+    %load/vec4 v0x55d2705ced90_0;
+    %pad/s 4;
+    %store/vec4 v0x55d2705cead0_0, 0, 4;
+    %load/vec4 v0x55d2705cee30_0;
+    %pad/s 4;
+    %store/vec4 v0x55d2705cebc0_0, 0, 4;
+    %delay 10, 0;
+    %vpi_call 2 23 "$display", "A = %b, B = %b, Y = %b", v0x55d2705cead0_0, v0x55d2705cebc0_0, v0x55d2705cec90_0 {0 0 0};
+    %load/vec4 v0x55d2705cee30_0;
+    %addi 1, 0, 32;
+    %store/vec4 v0x55d2705cee30_0, 0, 32;
+    %jmp T_0.2;
+T_0.3 ;
+    %load/vec4 v0x55d2705ced90_0;
+    %addi 1, 0, 32;
+    %store/vec4 v0x55d2705ced90_0, 0, 32;
+    %jmp T_0.0;
+T_0.1 ;
+    %vpi_call 2 27 "$display", "All combinations tested" {0 0 0};
+    %vpi_call 2 28 "$finish" {0 0 0};
+    %end;
+    .thread T_0;
+# The file index is used to find the file name in the following table.
+:file_names 4;
+    "N/A";
+    "<interactive>";
+    "and_tb.v";
+    "and_gate.v";
