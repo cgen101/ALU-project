@@ -37,10 +37,10 @@ module addition_tb;
         #10;
         $display("Test 2: A = %b, B = %b, carry_in = %b => Sum = %b, carry_out = %b", A, B, carry_in, Sum, carry_out);
 
-        // Test 3: A = 4'b1010, B = 4'b0101, carry_in = 1
+        // Test 3: A = 4'b1010, B = 4'b0101, carry_in = 0
         A = 4'b1010;
         B = 4'b0101;
-        carry_in = 1'b1;
+        carry_in = 1'b0;
         #10;
         $display("Test 3: A = %b, B = %b, carry_in = %b => Sum = %b, carry_out = %b", A, B, carry_in, Sum, carry_out);
 
