@@ -1,0 +1,61 @@
+#! /opt/homebrew/Cellar/icarus-verilog/12.0/bin/vvp
+:ivl_version "12.0 (stable)";
+:ivl_delay_selection "TYPICAL";
+:vpi_time_precision - 9;
+:vpi_module "/opt/homebrew/Cellar/icarus-verilog/12.0/lib/ivl/system.vpi";
+:vpi_module "/opt/homebrew/Cellar/icarus-verilog/12.0/lib/ivl/vhdl_sys.vpi";
+:vpi_module "/opt/homebrew/Cellar/icarus-verilog/12.0/lib/ivl/vhdl_textio.vpi";
+:vpi_module "/opt/homebrew/Cellar/icarus-verilog/12.0/lib/ivl/v2005_math.vpi";
+:vpi_module "/opt/homebrew/Cellar/icarus-verilog/12.0/lib/ivl/va_math.vpi";
+S_0x12f608c20 .scope module, "subtraction_tb" "subtraction_tb" 2 4;
+ .timescale -9 -9;
+v0x12f618f80_0 .var "A", 3 0;
+v0x12f619030_0 .var "B", 3 0;
+v0x12f6190e0_0 .net "Y", 3 0, L_0x12f6191b0;  1 drivers
+S_0x12f608d90 .scope module, "uut" "subtraction" 2 10, 3 4 0, S_0x12f608c20;
+ .timescale 0 0;
+    .port_info 0 /OUTPUT 4 "Y";
+    .port_info 1 /INPUT 4 "A";
+    .port_info 2 /INPUT 4 "B";
+v0x12f6088e0_0 .net "A", 3 0, v0x12f618f80_0;  1 drivers
+v0x12f618dc0_0 .net "B", 3 0, v0x12f619030_0;  1 drivers
+v0x12f618e70_0 .net "Y", 3 0, L_0x12f6191b0;  alias, 1 drivers
+L_0x12f6191b0 .arith/sub 4, v0x12f618f80_0, v0x12f619030_0;
+    .scope S_0x12f608c20;
+T_0 ;
+    %vpi_call 2 13 "$dumpfile", "subtraction_tb.vcd" {0 0 0};
+    %vpi_call 2 14 "$dumpvars", 32'sb00000000000000000000000000000000, S_0x12f608c20 {0 0 0};
+    %pushi/vec4 1, 0, 4;
+    %store/vec4 v0x12f618f80_0, 0, 4;
+    %pushi/vec4 1, 0, 4;
+    %store/vec4 v0x12f619030_0, 0, 4;
+    %delay 10, 0;
+    %pushi/vec4 10, 0, 4;
+    %store/vec4 v0x12f618f80_0, 0, 4;
+    %pushi/vec4 3, 0, 4;
+    %store/vec4 v0x12f619030_0, 0, 4;
+    %delay 10, 0;
+    %pushi/vec4 12, 0, 4;
+    %store/vec4 v0x12f618f80_0, 0, 4;
+    %pushi/vec4 5, 0, 4;
+    %store/vec4 v0x12f619030_0, 0, 4;
+    %delay 10, 0;
+    %pushi/vec4 15, 0, 4;
+    %store/vec4 v0x12f618f80_0, 0, 4;
+    %pushi/vec4 14, 0, 4;
+    %store/vec4 v0x12f619030_0, 0, 4;
+    %delay 10, 0;
+    %pushi/vec4 5, 0, 4;
+    %store/vec4 v0x12f618f80_0, 0, 4;
+    %pushi/vec4 9, 0, 4;
+    %store/vec4 v0x12f619030_0, 0, 4;
+    %delay 10, 0;
+    %vpi_call 2 23 "$display", "Testing subtraction" {0 0 0};
+    %end;
+    .thread T_0;
+# The file index is used to find the file name in the following table.
+:file_names 4;
+    "N/A";
+    "<interactive>";
+    "subtraction_tb.v";
+    "subtraction.v";
