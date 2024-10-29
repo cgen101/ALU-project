@@ -1,0 +1,60 @@
+$date
+	Tue Oct 29 14:01:49 2024
+$end
+$version
+	Icarus Verilog
+$end
+$timescale
+	1ps
+$end
+$scope module shift_tb $end
+$var wire 4 ! Y [3:0] $end
+$var reg 4 " A [3:0] $end
+$var reg 2 # amt [1:0] $end
+$var reg 1 $ dir $end
+$scope module uut $end
+$var wire 4 % A [3:0] $end
+$var wire 2 & amt [1:0] $end
+$var wire 1 $ dir $end
+$var reg 4 ' Y [3:0] $end
+$upscope $end
+$upscope $end
+$enddefinitions $end
+#0
+$dumpvars
+b1010 '
+b0 &
+b1010 %
+0$
+b0 #
+b1010 "
+b1010 !
+$end
+#10000
+b100 !
+b100 '
+b1 #
+b1 &
+#20000
+b1000 !
+b1000 '
+b10 #
+b10 &
+#30000
+b101 !
+b101 '
+1$
+b1 #
+b1 &
+#40000
+b10 !
+b10 '
+b10 #
+b10 &
+#50000
+b0 !
+b0 '
+0$
+b0 "
+b0 %
+#60000

@@ -1,0 +1,103 @@
+$date
+	Mon Oct 28 20:20:29 2024
+$end
+$version
+	Icarus Verilog
+$end
+$timescale
+	1ps
+$end
+$scope module division_tb $end
+$var wire 1 ! valid $end
+$var wire 4 " remainder [3:0] $end
+$var wire 4 # quotient [3:0] $end
+$var reg 4 $ dividend [3:0] $end
+$var reg 4 % divisor [3:0] $end
+$scope module uut $end
+$var wire 4 & dividend [3:0] $end
+$var wire 4 ' divisor [3:0] $end
+$var reg 4 ( quotient [3:0] $end
+$var reg 4 ) remainder [3:0] $end
+$var reg 4 * temp_dividend [3:0] $end
+$var reg 4 + temp_quotient [3:0] $end
+$var reg 1 ! valid $end
+$var integer 32 , i [31:0] $end
+$upscope $end
+$upscope $end
+$enddefinitions $end
+#0
+$dumpvars
+b11111111111111111111111111111111 ,
+b0 +
+b0 *
+b0 )
+b0 (
+b1 '
+b0 &
+b1 %
+b0 $
+b0 #
+b0 "
+1!
+$end
+#10000
+b1 "
+b1 )
+b1 #
+b1 (
+b1 +
+b11111111111111111111111111111111 ,
+b0 *
+1!
+b1 $
+b1 &
+#20000
+b11111111111111111111111111111111 ,
+b100 +
+b0 *
+1!
+b100 "
+b100 )
+b100 #
+b100 (
+b10 %
+b10 '
+b100 $
+b100 &
+#30000
+b11111111111111111111111111111111 ,
+b111 +
+b0 *
+1!
+b111 "
+b111 )
+b111 #
+b111 (
+b100 %
+b100 '
+b111 $
+b111 &
+#40000
+b11111111111111111111111111111111 ,
+b1010 +
+b0 *
+1!
+b1010 "
+b1010 )
+b1010 #
+b1010 (
+b11 %
+b11 '
+b1010 $
+b1010 &
+#50000
+0!
+b1001 "
+b1001 )
+b0 #
+b0 (
+b0 %
+b0 '
+b1001 $
+b1001 &
+#60000
