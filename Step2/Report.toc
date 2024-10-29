@@ -1,31 +1,33 @@
 \contentsline {section}{\numberline {1}Introduction}{1}{section.1}%
 \contentsline {section}{\numberline {2}2x4 Shift Circuit}{1}{section.2}%
 \contentsline {subsection}{\numberline {2.1}Shift Circuit Verilog Code}{1}{subsection.2.1}%
-\contentsline {subsection}{\numberline {2.2}Shift Circuit Waveforms}{1}{subsection.2.2}%
-\contentsline {section}{\numberline {3}Not Circuit}{2}{section.3}%
-\contentsline {subsection}{\numberline {3.1}Not Circuit Verilog Code}{2}{subsection.3.1}%
-\contentsline {subsection}{\numberline {3.2}Not Circuit Waveform}{3}{subsection.3.2}%
-\contentsline {section}{\numberline {4}And Circuit}{4}{section.4}%
-\contentsline {subsection}{\numberline {4.1}And Circuit Verilog Code}{4}{subsection.4.1}%
-\contentsline {subsection}{\numberline {4.2}And Circuit Waveform}{5}{subsection.4.2}%
-\contentsline {section}{\numberline {5}Nand Circuit}{6}{section.5}%
-\contentsline {subsection}{\numberline {5.1}Nanad Circuit Verilog Code}{6}{subsection.5.1}%
-\contentsline {subsection}{\numberline {5.2}Nand Circuit Waveform}{7}{subsection.5.2}%
-\contentsline {section}{\numberline {6}Or Circuit}{8}{section.6}%
-\contentsline {subsection}{\numberline {6.1}Or Circuit Verilog Code}{8}{subsection.6.1}%
-\contentsline {subsection}{\numberline {6.2}Or Circuit Waveform}{9}{subsection.6.2}%
-\contentsline {section}{\numberline {7}Nor Circuit}{9}{section.7}%
-\contentsline {subsection}{\numberline {7.1}Nor Circuit Verilog Code}{9}{subsection.7.1}%
-\contentsline {subsection}{\numberline {7.2}Nor Circuit Waveform}{10}{subsection.7.2}%
-\contentsline {section}{\numberline {8}Xor Circuit}{10}{section.8}%
-\contentsline {subsection}{\numberline {8.1}Xor Circuit Waveform}{11}{subsection.8.1}%
-\contentsline {section}{\numberline {9}XNor Circuit}{12}{section.9}%
-\contentsline {subsection}{\numberline {9.1}Xnor Circuit Waveform}{14}{subsection.9.1}%
-\contentsline {section}{\numberline {10}Addition Circuit}{14}{section.10}%
-\contentsline {subsection}{\numberline {10.1}Addition Circuit Waveform}{17}{subsection.10.1}%
-\contentsline {section}{\numberline {11}Multiplication Circuit}{18}{section.11}%
-\contentsline {subsection}{\numberline {11.1}Multiplication Circuit Waveform}{20}{subsection.11.1}%
-\contentsline {section}{\numberline {12}Subtraction Circuit}{21}{section.12}%
-\contentsline {subsection}{\numberline {12.1}Subtraction Circuit Verilog Code}{21}{subsection.12.1}%
-\contentsline {subsection}{\numberline {12.2}Subtraction Circuit Waveform}{22}{subsection.12.2}%
-\contentsline {section}{\numberline {13}Conclusion}{23}{section.13}%
+\contentsline {subsection}{\numberline {2.2}Shift Circuit Waveforms}{4}{subsection.2.2}%
+\contentsline {section}{\numberline {3}Not Circuit}{5}{section.3}%
+\contentsline {subsection}{\numberline {3.1}Not Circuit Verilog Code}{5}{subsection.3.1}%
+\contentsline {subsection}{\numberline {3.2}Not Circuit Waveform}{6}{subsection.3.2}%
+\contentsline {section}{\numberline {4}And Circuit}{7}{section.4}%
+\contentsline {subsection}{\numberline {4.1}And Circuit Verilog Code}{7}{subsection.4.1}%
+\contentsline {subsection}{\numberline {4.2}And Circuit Waveform}{8}{subsection.4.2}%
+\contentsline {section}{\numberline {5}Nand Circuit}{9}{section.5}%
+\contentsline {subsection}{\numberline {5.1}Nanad Circuit Verilog Code}{10}{subsection.5.1}%
+\contentsline {subsection}{\numberline {5.2}Nand Circuit Waveform}{11}{subsection.5.2}%
+\contentsline {section}{\numberline {6}Or Circuit}{12}{section.6}%
+\contentsline {subsection}{\numberline {6.1}Or Circuit Verilog Code}{12}{subsection.6.1}%
+\contentsline {subsection}{\numberline {6.2}Or Circuit Waveform}{12}{subsection.6.2}%
+\contentsline {section}{\numberline {7}Nor Circuit}{13}{section.7}%
+\contentsline {subsection}{\numberline {7.1}Nor Circuit Verilog Code}{13}{subsection.7.1}%
+\contentsline {subsection}{\numberline {7.2}Nor Circuit Waveform}{13}{subsection.7.2}%
+\contentsline {section}{\numberline {8}Xor Circuit}{14}{section.8}%
+\contentsline {subsection}{\numberline {8.1}Xor Circuit Waveform}{15}{subsection.8.1}%
+\contentsline {section}{\numberline {9}XNor Circuit}{16}{section.9}%
+\contentsline {subsection}{\numberline {9.1}Xnor Circuit Waveform}{17}{subsection.9.1}%
+\contentsline {section}{\numberline {10}Addition Circuit}{18}{section.10}%
+\contentsline {subsection}{\numberline {10.1}Addition Circuit Waveform}{20}{subsection.10.1}%
+\contentsline {section}{\numberline {11}Multiplication Circuit}{22}{section.11}%
+\contentsline {subsection}{\numberline {11.1}Multiplication Circuit Waveform}{23}{subsection.11.1}%
+\contentsline {section}{\numberline {12}Subtraction Circuit}{24}{section.12}%
+\contentsline {subsection}{\numberline {12.1}Subtraction Circuit Verilog Code}{24}{subsection.12.1}%
+\contentsline {subsection}{\numberline {12.2}Subtraction Circuit Waveform}{26}{subsection.12.2}%
+\contentsline {section}{\numberline {13}Division Circuit}{26}{section.13}%
+\contentsline {subsection}{\numberline {13.1}Multiplication Circuit Waveform}{29}{subsection.13.1}%
+\contentsline {section}{\numberline {14}Conclusion}{30}{section.14}%
