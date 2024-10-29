@@ -1,0 +1,61 @@
+$date
+	Mon Oct 28 12:42:03 2024
+$end
+$version
+	Icarus Verilog
+$end
+$timescale
+	1ns
+$end
+$scope module subtraction_tb $end
+$var wire 4 ! Y [3:0] $end
+$var reg 4 " A [3:0] $end
+$var reg 4 # B [3:0] $end
+$scope module uut $end
+$var wire 4 $ A [3:0] $end
+$var wire 4 % B [3:0] $end
+$var wire 4 & Y [3:0] $end
+$upscope $end
+$upscope $end
+$enddefinitions $end
+$comment Show the parameter values. $end
+$dumpall
+$end
+#0
+$dumpvars
+b0 &
+b1 %
+b1 $
+b1 #
+b1 "
+b0 !
+$end
+#10
+b11 #
+b11 %
+b111 !
+b111 &
+b1010 "
+b1010 $
+#20
+b101 #
+b101 %
+b111 !
+b111 &
+b1100 "
+b1100 $
+#30
+b1110 #
+b1110 %
+b1 !
+b1 &
+b1111 "
+b1111 $
+#40
+b1001 #
+b1001 %
+b1100 !
+b1100 &
+b101 "
+b101 $
+#50

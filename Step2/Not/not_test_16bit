@@ -1,0 +1,45 @@
+#! /opt/homebrew/Cellar/icarus-verilog/12.0/bin/vvp
+:ivl_version "12.0 (stable)";
+:ivl_delay_selection "TYPICAL";
+:vpi_time_precision - 9;
+:vpi_module "/opt/homebrew/Cellar/icarus-verilog/12.0/lib/ivl/system.vpi";
+:vpi_module "/opt/homebrew/Cellar/icarus-verilog/12.0/lib/ivl/vhdl_sys.vpi";
+:vpi_module "/opt/homebrew/Cellar/icarus-verilog/12.0/lib/ivl/vhdl_textio.vpi";
+:vpi_module "/opt/homebrew/Cellar/icarus-verilog/12.0/lib/ivl/v2005_math.vpi";
+:vpi_module "/opt/homebrew/Cellar/icarus-verilog/12.0/lib/ivl/va_math.vpi";
+S_0x13ab06370 .scope module, "not_tb_16bit" "not_tb_16bit" 2 4;
+ .timescale -9 -9;
+v0x13ab19a20_0 .var "A", 15 0;
+v0x13ab19ae0_0 .net "Y", 15 0, L_0x13ab19b90;  1 drivers
+S_0x13ab064e0 .scope module, "uut" "not_gate_16bit" 2 9, 3 4 0, S_0x13ab06370;
+ .timescale 0 0;
+    .port_info 0 /OUTPUT 16 "Y";
+    .port_info 1 /INPUT 16 "A";
+L_0x13ab19b90 .functor NOT 16, v0x13ab19a20_0, C4<0000000000000000>, C4<0000000000000000>, C4<0000000000000000>;
+v0x13ab08e30_0 .net "A", 15 0, v0x13ab19a20_0;  1 drivers
+v0x13ab19960_0 .net "Y", 15 0, L_0x13ab19b90;  alias, 1 drivers
+    .scope S_0x13ab06370;
+T_0 ;
+    %vpi_call 2 14 "$dumpfile", "not_tb_16bit.vcd" {0 0 0};
+    %vpi_call 2 15 "$dumpvars", 32'sb00000000000000000000000000000000, S_0x13ab06370 {0 0 0};
+    %pushi/vec4 0, 0, 16;
+    %store/vec4 v0x13ab19a20_0, 0, 16;
+    %delay 10, 0;
+    %pushi/vec4 65535, 0, 16;
+    %store/vec4 v0x13ab19a20_0, 0, 16;
+    %delay 10, 0;
+    %pushi/vec4 43690, 0, 16;
+    %store/vec4 v0x13ab19a20_0, 0, 16;
+    %delay 10, 0;
+    %pushi/vec4 21845, 0, 16;
+    %store/vec4 v0x13ab19a20_0, 0, 16;
+    %delay 10, 0;
+    %vpi_call 2 23 "$display", "Testing not" {0 0 0};
+    %end;
+    .thread T_0;
+# The file index is used to find the file name in the following table.
+:file_names 4;
+    "N/A";
+    "<interactive>";
+    "not_tb_16bit.v";
+    "not_gate_16bit.v";
