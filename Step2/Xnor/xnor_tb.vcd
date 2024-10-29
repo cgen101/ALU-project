@@ -1,5 +1,5 @@
 $date
-	Fri Oct 25 11:47:47 2024
+	Mon Oct 28 15:11:45 2024
 $end
 $version
 	Icarus Verilog
@@ -8,13 +8,13 @@ $timescale
 	1ns
 $end
 $scope module xnor_tb $end
-$var wire 8 ! Y [7:0] $end
-$var reg 8 " A [7:0] $end
-$var reg 8 # B [7:0] $end
+$var wire 4 ! Y [3:0] $end
+$var reg 4 " A [3:0] $end
+$var reg 4 # B [3:0] $end
 $scope module uut $end
-$var wire 8 $ A [7:0] $end
-$var wire 8 % B [7:0] $end
-$var wire 8 & Y [7:0] $end
+$var wire 4 $ A [3:0] $end
+$var wire 4 % B [3:0] $end
+$var wire 4 & Y [3:0] $end
 $upscope $end
 $upscope $end
 $enddefinitions $end
@@ -23,56 +23,52 @@ $dumpall
 $end
 #0
 $dumpvars
-b11111111 &
+b1111 &
 b0 %
 b0 $
 b0 #
 b0 "
-b11111111 !
+b1111 !
 $end
 #10
-b11111111 #
-b11111111 %
-b11111111 "
-b11111111 $
+b0 !
+b0 &
+b1111 #
+b1111 %
 #20
-b0 !
-b0 &
-b1010101 #
-b1010101 %
-b10101010 "
-b10101010 $
+b101 #
+b101 %
+b1010 "
+b1010 $
 #30
-b11111111 !
-b11111111 &
-b11110000 #
-b11110000 %
-b11110000 "
-b11110000 $
+b1001 !
+b1001 &
+b1010 #
+b1010 %
+b1100 "
+b1100 $
 #40
-b0 !
-b0 &
+b1111 !
+b1111 &
+b1111 #
+b1111 %
 b1111 "
 b1111 $
 #50
-b11111111 !
-b11111111 &
-b110011 #
-b110011 %
-b110011 "
-b110011 $
+b110 #
+b110 %
+b110 "
+b110 $
 #60
-b0 !
-b0 &
-b11000011 #
-b11000011 %
-b111100 "
-b111100 $
+b1001 #
+b1001 %
+b1001 "
+b1001 $
 #70
-b11001100 !
-b11001100 &
-b100001 #
-b100001 %
-b10010 "
-b10010 $
+b101 !
+b101 &
+b111 #
+b111 %
+b1101 "
+b1101 $
 #80

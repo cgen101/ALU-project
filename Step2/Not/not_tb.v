@@ -8,7 +8,6 @@ wire [3:0]Y;
 
 not_gate uut(Y, A);
 
-integer i;  // Loop variable
 initial begin
 
     $dumpfile("not_tb.vcd");//holds output waveform

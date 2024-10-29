@@ -1,6 +1,6 @@
 # Fdb version 4
-["pdflatex"] 1730145764.66531 "/Users/brianlee/Documents/architecture/ALU-project/Step2/Report.tex" "Report.pdf" "Report" 1730145765.59874 2
-  "/Users/brianlee/Documents/architecture/ALU-project/Step2/Report.tex" 1730145763.20275 17306 26af727a96889c17e5c58eaa9815a518 ""
+["pdflatex"] 1730209259.68522 "/Users/brianlee/Documents/architecture/ALU-project/Step2/Report.tex" "Report.pdf" "Report" 1730209260.60435 2
+  "/Users/brianlee/Documents/architecture/ALU-project/Step2/Report.tex" 1730209258.09459 17628 f49ddad14fb1a841b41e1f28da22c462 ""
   "/opt/homebrew/Cellar/texlive/20240312_1/share/texmf-dist/fonts/enc/dvips/base/8r.enc" 1710106625 4850 80dc9bab7f31fb78a000ccfed0e27cab ""
   "/opt/homebrew/Cellar/texlive/20240312_1/share/texmf-dist/fonts/map/fontname/texfonts.map" 1710106625 3524 cb3e574dea2d1052e39280babc910dc8 ""
   "/opt/homebrew/Cellar/texlive/20240312_1/share/texmf-dist/fonts/map/pdftex/updmap/pdftex.map" 1710106625 5472554 f7861620179a71a79d4bd86251f559d0 ""
@@ -107,10 +107,10 @@
   "/opt/homebrew/Cellar/texlive/20240312_1/share/texmf-dist/tex/latex/xcolor/xcolor.sty" 1710106625 55487 80a65caedd3722f4c20a14a69e785d8f ""
   "/opt/homebrew/Cellar/texlive/20240312_1/share/texmf-dist/web2c/texmf.cnf" 1710106625 41652 e14926ab86fde7902cad99d9eeaa5ca5 ""
   "/opt/homebrew/Cellar/texlive/20240312_1/share/texmf-var/web2c/pdftex/pdflatex.fmt" 1710106625 8221851 5146b755db1b51297976139fe7739199 ""
-  "Report.aux" 1730145765.54758 138 dfd98a311dd1033c83c001c747190af7 "pdflatex"
-  "Report.tex" 1730145763.20275 17306 26af727a96889c17e5c58eaa9815a518 ""
-  "Report.toc" 1730145765.51548 0 d41d8cd98f00b204e9800998ecf8427e "pdflatex"
-  "report.sty" 1705077588 7778 ad22ba0757d619a20fee2643b740f3f1 ""
+  "Report.aux" 1730209260.55091 138 dfd98a311dd1033c83c001c747190af7 "pdflatex"
+  "Report.tex" 1730209258.09459 17628 f49ddad14fb1a841b41e1f28da22c462 ""
+  "Report.toc" 1730209260.51867 0 d41d8cd98f00b204e9800998ecf8427e "pdflatex"
+  "report.sty" 1730145948.00948 7778 ad22ba0757d619a20fee2643b740f3f1 ""
   (generated)
   "Report.aux"
   "Report.log"

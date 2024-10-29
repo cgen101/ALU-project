@@ -146,19 +146,27 @@ To test the Not circuit, we have created one register A, as well as a wire Y. Th
 \lstinputlisting[language=Verilog]{not/not_tb.v}
 
 \subsection{Not Circuit Waveform}
-At 2 ns, we can see that  A is 0, so the output Y is 1.
+At 0 ns, we can see that  A is the hex value 0, so the output Y is the hex value F.
 \begin{figure}[H]
     \centering
-    \includegraphics[width = 1.0\textwidth]{not/not_wave.PNG}
-    \caption{Not Circuit with marker at 2ns}
+    \includegraphics[width = 1.0\textwidth]{Step2/Not/Not-0ns.png}
+    \caption{Not Circuit with marker at 0ns}
     \label{fig:enter-label}
 \end{figure}
 
-At 10 ns, A becomes 1, so Y becomes 0.
+At 20 ns, A becomes the hex value A, so Y becomes the hex value 5.
 \begin{figure}[H]
     \centering
-    \includegraphics[width = 1.0\textwidth]{not/not_wave1.png}
-    \caption{Not Circuit with marker at 10ns}
+    \includegraphics[width = 1.0\textwidth]{Step2/Not/Not-20ns.png}
+    \caption{Not Circuit with marker at 20ns}
+    \label{fig:enter-label}
+\end{figure}
+
+At 40 ns, A becomes the hex value 5, so Y becomes the hex value A.
+\begin{figure}[H]
+    \centering
+    \includegraphics[width = 1.0\textwidth]{Step2/Not/Not-40ns.png}
+    \caption{Not Circuit with marker at 40ns}
     \label{fig:enter-label}
 \end{figure}
 
