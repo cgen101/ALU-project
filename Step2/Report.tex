@@ -89,10 +89,10 @@ Next, we tested each circuit's functionality to ensure expected behavior, follow
 
 The 2x4 shift circuit takes a 4-bit input and shifts the bits left or right by up to two positions, depending on the control signal. Each shift moves the bits in the input to adjacent positions, and the vacant bits are filled with zeros. Shifting by one or two positions allows for additional flexibility in data manipulation, making the circuit versatile in operations where both single and double shifts are required.
 \subsection{Shift Circuit Verilog Code}
-%\lstinputlisting[language=Verilog]{2x4Shifter/shift_tb.v}
+\lstinputlisting[language=Verilog]{2x4Shifter/shift_tb.v}
 
 To test the Shift circuit we have created 2 registers, one for the input and one for the shifting then one wire for the output. If this circuit works properly the output should display the input shifted to the left and zeros filling the shifted positions.
-%\lstinputlisting[language=Verilog]{2x4Shifter/shift_tb.v}
+\lstinputlisting[language=Verilog]{2x4Shifter/shift_tb.v}
 
 
 \subsection{Shift Circuit Waveforms}
@@ -100,7 +100,7 @@ To test the Shift circuit we have created 2 registers, one for the input and one
 At 0 ns, we can see that A is 0, so the output Y is 0.
 \begin{figure}[H]
     \centering
-%    \includegraphics[width = 1.0\textwidth]{1x4bit-shift/shift_wave1.PNG}
+    \includegraphics[width = 1.0\textwidth]{2x4Shifter/shift_wave.PNG}
     \caption{Shift Circuit with marker at 0ns}
     \label{fig:shift-wave1}
 \end{figure}
@@ -108,7 +108,7 @@ At 0 ns, we can see that A is 0, so the output Y is 0.
 At 10 ns, A is 1 (0001), so Y becomes 2 (0010).
 \begin{figure}[H]
     \centering
-%    \includegraphics[width = 1.0\textwidth]{1x4bit-shift/shift_wave2.PNG}
+    \includegraphics[width = 1.0\textwidth]{2x4Shifter/shift_wave1.PNG}
     \caption{Shift Circuit with marker at 10ns}
     \label{fig:shift-wave2}
 \end{figure}
@@ -116,18 +116,9 @@ At 10 ns, A is 1 (0001), so Y becomes 2 (0010).
 At 20 ns, A is 2 (0010), so Y becomes 4 (0100).
 \begin{figure}[H]
     \centering
-%    \includegraphics[width = 1.0\textwidth]{1x4bit-shift/shift_wave3.PNG}
+    \includegraphics[width = 1.0\textwidth]{2x4Shifter/shift_wave2.PNG}
     \caption{Shift Circuit with marker at 20ns}
     \label{fig:shift-wave3}
-\end{figure}
-
-
-At 30 ns, A is F (1111) so Y becomes E (1110).
-\begin{figure}[H]
-    \centering
-%    \includegraphics[width = 1.0\textwidth]{1x4bit-shift/shift_wave4.PNG}
-    \caption{Shift Circuit with marker at 30ns}
-    \label{fig:shift-wave4}
 \end{figure}
 
 \section{Not Circuit}
@@ -135,7 +126,7 @@ The Not circuit takes one input A, with an output Y. This will output a 0 if A i
 
 ```\begin{figure}[H]
     \centering
-%    \includegraphics[width = 1.0\textwidth]{Truth-Tables/NotTT.PNG}
+    %\includegraphics[width = 1.0\textwidth]{Not/NOT.png}
     \caption{Not truth table and gate}
     \label{fig:shift-table}
 \end{figure}
@@ -215,6 +206,12 @@ At 2550ns, A and B are both F (1111), so Y is also F (1111).
 \section{Nand Circuit}
 
 The Nand circuit takes two 4-bit inputs A and B, with a 4-bit output Y. A and B will undergo the bitwise Nand operation, and the result will be output to Y.
+```\begin{figure}[H]
+    \centering
+    \includegraphics[width = 1.0\textwidth]{And/and-truth.jpeg}
+    \caption{And truth table and gate}
+    \label{fig:shift-table}
+\end{figure}
 \subsection{Nanad Circuit Verilog Code} 
 \lstinputlisting[language=Verilog]{Nand/nand_gate.v} 
 
@@ -478,10 +475,10 @@ At 20ns, A is 6 and B is 3, so product upper is 0001 and product lower is 0010 f
 
 \section{Subtraction Circuit}
 \subsection{Subtraction Circuit Verilog Code} 
-%The Multiplication circuit takes two 4-bit inputs A and B, and produces two 4-bit outputs, product low and product high, representing the high and low 4 bits of the product of A and B. The circuit has an intermediary 8-bit variable, full product, which is used to extract the low and high 4 bits of the product. First, full product is assigned to the product of A and B. Then, product low is assigned the first 4 bits of full product. Then, product high is assigned the last 4 bits of full product. 
+The Multiplication circuit takes two 4-bit inputs A and B, and produces one 4-bit output, Y with the difference of the two
 \lstinputlisting[language=Verilog]{Subtraction/subtraction.v} 
 
-%To test the Multiplication circuit, we have created two registers A and B,and two wires product low and product high. We then perform 5 tests with A and B at various values. We will know that the Multiplication circuit is working as expected if product low, product high produces correct results for every combination of A times B that we have tested. For example, if A is 1111 and B is 1111, then the expected result: product high is 1110, product low is 0001 for a decimal value of 225.
+To test the Subtraction circuit, we have created two registers A and B and a wire Y for output. We then perform 5 tests with A and B at various values. We will know that the Subtraction circuit is working as expected if it produces correct results for every combination of A times B that we have tested. For example, if A is 1111 and B is 1111, then the expected result: Y is 0000
 \lstinputlisting[language=Verilog]{Subtraction/subtraction_tb.v}
 \subsection{Subtraction Circuit Waveform} 
 
@@ -509,6 +506,37 @@ At 0ns, A is Ch (1100) and B is 5h (0101), so Y = 7h (0111)
  \label{fig:enter-label}
  \end{figure}
 
+ \section{Division Circuit}
+ The Multiplication circuit takes two 4-bit inputs A and B, and produces two 4-bit outputs, product low and product high, representing the high and low 4 bits of the product of A and B. The circuit has an intermediary 8-bit variable, full product, which is used to extract the low and high 4 bits of the product. First, full product is assigned to the product of A and B. Then, product low is assigned the first 4 bits of full product. Then, product high is assigned the last 4 bits of full product. 
+ \lstinputlisting[language=Verilog]{Division/division.v} 
+ 
+ To test the Multiplication circuit, we have created two registers A and B,and two wires product low and product high. We then perform 5 tests with A and B at various values. We will know that the Multiplication circuit is working as expected if product low, product high produces correct results for every combination of A times B that we have tested. For example, if A is 1111 and B is 1111, then the expected result: product high is 1110, product low is 0001 for a decimal value of 225.
+ \lstinputlisting[language=Verilog]{Division/division_tb.v}
+ \subsection{Multiplication Circuit Waveform} 
+ 
+ At 2ns, A is 2 and B is 3, so product high is 0 and product low is 6.  
+ \begin{figure}[H]
+  \centering
+  \includegraphics[width = 1.0\textwidth]{Multiplication/multiplication_wave.png}
+  \caption{Multiplication Circuit with marker at 2ns}
+  \label{fig:enter-label} 
+ \end{figure} 
+ 
+ At 20ns, A is 6 and B is 3, so product upper is 0001 and product lower is 0010 for a decimal value of 18.  
+  \begin{figure}[H]
+  \centering 
+ \includegraphics[width = 1.0\textwidth]{Multiplication/multiplication_wave1.png}
+  \caption{Multiplication Circuit with marker at 20ns}
+  \label{fig:enter-label}
+  \end{figure}
+ 
+  At 40ns, A and B are both F, so product upper is E and product lower is 0001 for a decimal value of 256.
+  \begin{figure}[H]
+  \centering 
+ \includegraphics[width = 1.0\textwidth]{Multiplication/multiplication_wave2.png}
+  \caption{Multiplication Circuit with marker at 40ns}
+  \label{fig:enter-label}
+  \end{figure}
 
 \section{Conclusion}
 
