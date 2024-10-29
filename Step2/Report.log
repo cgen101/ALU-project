@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.26 (TeX Live 2024/Homebrew) (preloaded format=pdflatex 2024.7.14)  29 OCT 2024 08:40
+This is pdfTeX, Version 3.141592653-2.6-1.40.26 (TeX Live 2024/Homebrew) (preloaded format=pdflatex 2024.7.14)  29 OCT 2024 13:02
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -314,8 +314,110 @@ Package: float 2001/11/08 v1.3d Float enhancements (AL)
 \float@box=\box55
 \@float@everytoks=\toks26
 \@floatcapt=\box56
+) (./Report.aux
+
+LaTeX Warning: Label `fig:enter-label' multiply defined.
+
+
+LaTeX Warning: Label `fig:enter-label' multiply defined.
+
+
+LaTeX Warning: Label `fig:shift-table' multiply defined.
+
+
+LaTeX Warning: Label `fig:enter-label' multiply defined.
+
+
+LaTeX Warning: Label `fig:enter-label' multiply defined.
+
+
+LaTeX Warning: Label `fig:enter-label' multiply defined.
+
+
+LaTeX Warning: Label `fig:enter-label' multiply defined.
+
+
+LaTeX Warning: Label `fig:enter-label' multiply defined.
+
+
+LaTeX Warning: Label `fig:enter-label' multiply defined.
+
+
+LaTeX Warning: Label `fig:shift-table' multiply defined.
+
+
+LaTeX Warning: Label `fig:enter-label' multiply defined.
+
+
+LaTeX Warning: Label `fig:enter-label' multiply defined.
+
+
+LaTeX Warning: Label `fig:enter-label' multiply defined.
+
+
+LaTeX Warning: Label `fig:enter-label' multiply defined.
+
+
+LaTeX Warning: Label `fig:shift-table' multiply defined.
+
+
+LaTeX Warning: Label `fig:enter-label' multiply defined.
+
+
+LaTeX Warning: Label `fig:enter-label' multiply defined.
+
+
+LaTeX Warning: Label `fig:enter-label' multiply defined.
+
+
+LaTeX Warning: Label `fig:enter-label' multiply defined.
+
+
+LaTeX Warning: Label `fig:enter-label' multiply defined.
+
+
+LaTeX Warning: Label `fig:enter-label' multiply defined.
+
+
+LaTeX Warning: Label `fig:enter-label' multiply defined.
+
+
+LaTeX Warning: Label `fig:enter-label' multiply defined.
+
+
+LaTeX Warning: Label `fig:enter-label' multiply defined.
+
+
+LaTeX Warning: Label `fig:enter-label' multiply defined.
+
+
+LaTeX Warning: Label `fig:enter-label' multiply defined.
+
+
+LaTeX Warning: Label `fig:enter-label' multiply defined.
+
+
+LaTeX Warning: Label `fig:enter-label' multiply defined.
+
+
+LaTeX Warning: Label `fig:enter-label' multiply defined.
+
+
+LaTeX Warning: Label `fig:enter-label' multiply defined.
+
+
+LaTeX Warning: Label `fig:enter-label' multiply defined.
+
+
+LaTeX Warning: Label `fig:enter-label' multiply defined.
+
+
+LaTeX Warning: Label `fig:enter-label' multiply defined.
+
+
+LaTeX Warning: Label `fig:enter-label' multiply defined.
+
 )
-No file Report.aux.
 \openout1 = `Report.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 72.
@@ -336,6 +438,7 @@ LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 72.
 LaTeX Font Info:    ... okay on input line 72.
 LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 72.
 LaTeX Font Info:    ... okay on input line 72.
+
 *geometry* driver: auto-detecting
 *geometry* detected driver: pdftex
 *geometry* verbose mode - [ preamble ] result:
@@ -403,6 +506,7 @@ LaTeX Font Info:    ... okay on input line 72.
 * (1in=72.27pt=25.4mm, 1cm=28.453pt)
 
 Package hyperref Info: Link coloring ON on input line 72.
+(./Report.out) (./Report.out)
 \@outlinefile=\write3
 \openout3 = `Report.out'.
 
@@ -422,7 +526,7 @@ LaTeX Info: Redefining \showhyphens on input line 72.
 Package microtype Info: No adjustment of tracking.
 Package microtype Info: No adjustment of interword spacing.
 Package microtype Info: No adjustment of character kerning.
-(/opt/homebrew/Cellar/texlive/20240312_1/share/texmf-dist/tex/latex/microtype/mt-ptm.cfg
+ (/opt/homebrew/Cellar/texlive/20240312_1/share/texmf-dist/tex/latex/microtype/mt-ptm.cfg
 File: mt-ptm.cfg 2006/04/20 v1.7 microtype config. file: Times (RS)
 ) (/opt/homebrew/Cellar/texlive/20240312_1/share/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
@@ -461,39 +565,615 @@ File: mt-msb.cfg 2005/06/01 v1.0 microtype config. file: AMS symbols (b) (RS)
 ) [1
 
 
-{/opt/homebrew/Cellar/texlive/20240312_1/share/texmf-dist/fonts/map/pdftex/updmap/pdftex.map}{/opt/homebrew/Cellar/texlive/20240312_1/share/texmf-dist/fonts/enc/dvips/base/8r.enc}]
-No file Report.toc.
+{/opt/homebrew/Cellar/texlive/20240312_1/share/texmf-dist/fonts/map/pdftex/updmap/pdftex.map}{/opt/homebrew/Cellar/texlive/20240312_1/share/texmf-dist/fonts/enc/dvips/base/8r.enc}] (./Report.toc
+
+Package fancyhdr Warning: \headheight is too small (14.0pt): 
+(fancyhdr)                Make it at least 14.49998pt, for example:
+(fancyhdr)                \setlength{\headheight}{14.49998pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+(fancyhdr)                \addtolength{\topmargin}{-0.49998pt}.
+
+[2])
 \tf@toc=\write4
 \openout4 = `Report.toc'.
 
-[2] (/opt/homebrew/Cellar/texlive/20240312_1/share/texmf-dist/tex/latex/listings/lstlang1.sty
+ [3]
+
+Package fancyhdr Warning: \headheight is too small (14.0pt): 
+(fancyhdr)                Make it at least 14.49998pt, for example:
+(fancyhdr)                \setlength{\headheight}{14.49998pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+(fancyhdr)                \addtolength{\topmargin}{-0.49998pt}.
+
+
+pdfTeX warning (ext4): destination with the same identifier (name{page.1}) has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.123 
+       [1
+pdfTeX warning (ext4): destination with the same identifier (name{figure.1}) has been already used, duplicate ignored
+<argument> ...shipout:D \box_use:N \l_shipout_box 
+                                                  \__shipout_drop_firstpage_...
+l.123 
+      
+pdfTeX warning (ext4): destination with the same identifier (name{figure.2}) has been already used, duplicate ignored
+<argument> ...shipout:D \box_use:N \l_shipout_box 
+                                                  \__shipout_drop_firstpage_...
+l.123 
+      ] (/opt/homebrew/Cellar/texlive/20240312_1/share/texmf-dist/tex/latex/listings/lstlang1.sty
 File: lstlang1.sty 2024/02/21 1.10 listings language file
 ) (/opt/homebrew/Cellar/texlive/20240312_1/share/texmf-dist/tex/latex/listings/lstlang2.sty
 File: lstlang2.sty 2024/02/21 1.10 listings language file
 ) (/opt/homebrew/Cellar/texlive/20240312_1/share/texmf-dist/tex/latex/listings/lstlang3.sty
 File: lstlang3.sty 2024/02/21 1.10 listings language file
 )
+Package hyperref Info: bookmark level for unknown lstlisting defaults to 0 on input line 144.
+LaTeX Font Info:    Trying to load font information for T1+cmtt on input line 144.
+ (/opt/homebrew/Cellar/texlive/20240312_1/share/texmf-dist/tex/latex/base/t1cmtt.fd
+File: t1cmtt.fd 2023/04/13 v2.5m Standard LaTeX font definitions
+)
+Package microtype Info: Loading generic protrusion settings for font family
+(microtype)             `cmtt' (encoding: T1).
+(microtype)             For optimal results, create family-specific settings.
+(microtype)             See the microtype manual for details.
+ (./Not/not_gate.v) (./Not/not_tb.v
 
-! Package Listings Error: File `2x2x4Shifter/shift_tb(.v)' not found.
+Package fancyhdr Warning: \headheight is too small (14.0pt): 
+(fancyhdr)                Make it at least 14.49998pt, for example:
+(fancyhdr)                \setlength{\headheight}{14.49998pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+(fancyhdr)                \addtolength{\topmargin}{-0.49998pt}.
 
-Type X to quit or <RETURN> to proceed,
-or enter new name. (Default extension: v)
 
-Enter file name: 
-/Users/brianlee/Documents/architecture/ALU-project/Step2/Report.tex:91: Emergency stop.
-<read *> 
-         
-l.91 ...language=Verilog]{2x2x4Shifter/shift_tb.v}
-                                                  ^^M
-*** (cannot \read from terminal in nonstop modes)
+pdfTeX warning (ext4): destination with the same identifier (name{page.2}) has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.13  
+         $dumpfile("not_tb.vcd");//holds output waveform [2
+pdfTeX warning (ext4): destination with the same identifier (name{figure.3}) has been already used, duplicate ignored
+<argument> ...shipout:D \box_use:N \l_shipout_box 
+                                                  \__shipout_drop_firstpage_...
+l.13  
+         $dumpfile("not_tb.vcd");//holds output waveform
+pdfTeX warning (ext4): destination with the same identifier (name{figure.4}) has been already used, duplicate ignored
+<argument> ...shipout:D \box_use:N \l_shipout_box 
+                                                  \__shipout_drop_firstpage_...
+l.13  
+         $dumpfile("not_tb.vcd");//holds output waveform
+pdfTeX warning (ext4): destination with the same identifier (name{figure.5}) has been already used, duplicate ignored
+<argument> ...shipout:D \box_use:N \l_shipout_box 
+                                                  \__shipout_drop_firstpage_...
+l.13  
+         $dumpfile("not_tb.vcd");//holds output waveform{/opt/homebrew/Cellar/texlive/20240312_1/share/texmf-dist/fonts/enc/dvips/cm-super/cm-super-t1.enc}])
+<Not/Not-0ns.png, id=210, 1031.855pt x 68.255pt>
+File: Not/Not-0ns.png Graphic file (type png)
+<use Not/Not-0ns.png>
+Package pdftex.def Info: Not/Not-0ns.png  used on input line 153.
+(pdftex.def)             Requested size: 430.00462pt x 28.44402pt.
+<Not/Not-20ns.png, id=212, 1026.83624pt x 66.2475pt>
+File: Not/Not-20ns.png Graphic file (type png)
+<use Not/Not-20ns.png>
+Package pdftex.def Info: Not/Not-20ns.png  used on input line 161.
+(pdftex.def)             Requested size: 430.00462pt x 27.74187pt.
+<Not/Not-40ns.png, id=213, 1026.83624pt x 115.43124pt>
+File: Not/Not-40ns.png Graphic file (type png)
+<use Not/Not-40ns.png>
+Package pdftex.def Info: Not/Not-40ns.png  used on input line 169.
+(pdftex.def)             Requested size: 430.00462pt x 48.33812pt.
 
- 
+
+Package fancyhdr Warning: \headheight is too small (14.0pt): 
+(fancyhdr)                Make it at least 14.49998pt, for example:
+(fancyhdr)                \setlength{\headheight}{14.49998pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+(fancyhdr)                \addtolength{\topmargin}{-0.49998pt}.
+
+
+pdfTeX warning (ext4): destination with the same identifier (name{page.3}) has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.182 \end{figure}
+                   [3
+pdfTeX warning (ext4): destination with the same identifier (name{figure.6}) has been already used, duplicate ignored
+<argument> ...shipout:D \box_use:N \l_shipout_box 
+                                                  \__shipout_drop_firstpage_...
+l.182 \end{figure}
+                  
+pdfTeX warning (ext4): destination with the same identifier (name{figure.7}) has been already used, duplicate ignored
+<argument> ...shipout:D \box_use:N \l_shipout_box 
+                                                  \__shipout_drop_firstpage_...
+l.182 \end{figure}
+                  
+pdfTeX warning (ext4): destination with the same identifier (name{figure.8}) has been already used, duplicate ignored
+<argument> ...shipout:D \box_use:N \l_shipout_box 
+                                                  \__shipout_drop_firstpage_...
+l.182 \end{figure}
+                   <./Not/Not-0ns.png> <./Not/Not-20ns.png> <./Not/Not-40ns.png>] (./And/and_gate.v) (./And/and_tb.v
+
+Package fancyhdr Warning: \headheight is too small (14.0pt): 
+(fancyhdr)                Make it at least 14.49998pt, for example:
+(fancyhdr)                \setlength{\headheight}{14.49998pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+(fancyhdr)                \addtolength{\topmargin}{-0.49998pt}.
+
+[4
+pdfTeX warning (ext4): destination with the same identifier (name{figure.9}) has been already used, duplicate ignored
+<argument> ...shipout:D \box_use:N \l_shipout_box 
+                                                  \__shipout_drop_firstpage_...
+l.20  
+                     A = i;])
+<And/and_wave.png, id=274, 637.63219pt x 94.10156pt>
+File: And/and_wave.png Graphic file (type png)
+<use And/and_wave.png>
+Package pdftex.def Info: And/and_wave.png  used on input line 194.
+(pdftex.def)             Requested size: 430.00462pt x 63.4598pt.
+<And/and_wave1.png, id=275, 646.66594pt x 95.6072pt>
+File: And/and_wave1.png Graphic file (type png)
+<use And/and_wave1.png>
+Package pdftex.def Info: And/and_wave1.png  used on input line 202.
+(pdftex.def)             Requested size: 430.00462pt x 63.57506pt.
+<And/and_wave2.png, id=276, 646.66594pt x 93.34875pt>
+File: And/and_wave2.png Graphic file (type png)
+<use And/and_wave2.png>
+Package pdftex.def Info: And/and_wave2.png  used on input line 210.
+(pdftex.def)             Requested size: 430.00462pt x 62.07327pt.
+
+Underfull \vbox (badness 3009) has occurred while \output is active []
+
+
+
+Package fancyhdr Warning: \headheight is too small (14.0pt): 
+(fancyhdr)                Make it at least 14.49998pt, for example:
+(fancyhdr)                \setlength{\headheight}{14.49998pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+(fancyhdr)                \addtolength{\topmargin}{-0.49998pt}.
+
+[5
+pdfTeX warning (ext4): destination with the same identifier (name{figure.10}) has been already used, duplicate ignored
+<argument> ...shipout:D \box_use:N \l_shipout_box 
+                                                  \__shipout_drop_firstpage_...
+l.214 
+      
+pdfTeX warning (ext4): destination with the same identifier (name{figure.11}) has been already used, duplicate ignored
+<argument> ...shipout:D \box_use:N \l_shipout_box 
+                                                  \__shipout_drop_firstpage_...
+l.214 
+       <./And/and_wave.png> <./And/and_wave1.png>] (./Nand/nand_gate.v) (./Nand/nand_tb.v
+
+Package fancyhdr Warning: \headheight is too small (14.0pt): 
+(fancyhdr)                Make it at least 14.49998pt, for example:
+(fancyhdr)                \setlength{\headheight}{14.49998pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+(fancyhdr)                \addtolength{\topmargin}{-0.49998pt}.
+
+[6
+pdfTeX warning (ext4): destination with the same identifier (name{figure.12}) has been already used, duplicate ignored
+<argument> ...shipout:D \box_use:N \l_shipout_box 
+                                                  \__shipout_drop_firstpage_...
+l.13 initial 
+             begin <./And/and_wave2.png>])
+<Nand/nand_wave.png, id=328, 637.63219pt x 97.11281pt>
+File: Nand/nand_wave.png Graphic file (type png)
+<use Nand/nand_wave.png>
+Package pdftex.def Info: Nand/nand_wave.png  used on input line 229.
+(pdftex.def)             Requested size: 430.00462pt x 65.49051pt.
+<Nand/nand_wave1.png, id=329, 645.91313pt x 88.07906pt>
+File: Nand/nand_wave1.png Graphic file (type png)
+<use Nand/nand_wave1.png>
+Package pdftex.def Info: Nand/nand_wave1.png  used on input line 237.
+(pdftex.def)             Requested size: 430.00462pt x 58.63634pt.
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+
+
+Package fancyhdr Warning: \headheight is too small (14.0pt): 
+(fancyhdr)                Make it at least 14.49998pt, for example:
+(fancyhdr)                \setlength{\headheight}{14.49998pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+(fancyhdr)                \addtolength{\topmargin}{-0.49998pt}.
+
+[7
+pdfTeX warning (ext4): destination with the same identifier (name{figure.13}) has been already used, duplicate ignored
+<argument> ...shipout:D \box_use:N \l_shipout_box 
+                                                  \__shipout_drop_firstpage_...
+l.241 
+       <./Nand/nand_wave.png>]
+<Nand/nand_wave2.png, id=358, 585.68813pt x 89.58469pt>
+File: Nand/nand_wave2.png Graphic file (type png)
+<use Nand/nand_wave2.png>
+Package pdftex.def Info: Nand/nand_wave2.png  used on input line 245.
+(pdftex.def)             Requested size: 430.00462pt x 65.7749pt.
+ (./or/or_gate.v)
+
+Package fancyhdr Warning: \headheight is too small (14.0pt): 
+(fancyhdr)                Make it at least 14.49998pt, for example:
+(fancyhdr)                \setlength{\headheight}{14.49998pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+(fancyhdr)                \addtolength{\topmargin}{-0.49998pt}.
+
+[8
+pdfTeX warning (ext4): destination with the same identifier (name{figure.14}) has been already used, duplicate ignored
+<argument> ...shipout:D \box_use:N \l_shipout_box 
+                                                  \__shipout_drop_firstpage_...
+l.264 \subsection{Or Circuit Waveform}
+                                      
+pdfTeX warning (ext4): destination with the same identifier (name{figure.15}) has been already used, duplicate ignored
+<argument> ...shipout:D \box_use:N \l_shipout_box 
+                                                  \__shipout_drop_firstpage_...
+l.264 \subsection{Or Circuit Waveform}
+                                      
+pdfTeX warning (ext4): destination with the same identifier (name{figure.16}) has been already used, duplicate ignored
+<argument> ...shipout:D \box_use:N \l_shipout_box 
+                                                  \__shipout_drop_firstpage_...
+l.264 \subsection{Or Circuit Waveform}
+                                       <./Nand/nand_wave1.png> <./Nand/nand_wave2.png>] (./nor/nor_gate.v)
+
+Package fancyhdr Warning: \headheight is too small (14.0pt): 
+(fancyhdr)                Make it at least 14.49998pt, for example:
+(fancyhdr)                \setlength{\headheight}{14.49998pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+(fancyhdr)                \addtolength{\topmargin}{-0.49998pt}.
+
+[9
+pdfTeX warning (ext4): destination with the same identifier (name{figure.17}) has been already used, duplicate ignored
+<argument> ...shipout:D \box_use:N \l_shipout_box 
+                                                  \__shipout_drop_firstpage_...
+l.313 \subsection
+                 {Nor Circuit Waveform}
+pdfTeX warning (ext4): destination with the same identifier (name{figure.18}) has been already used, duplicate ignored
+<argument> ...shipout:D \box_use:N \l_shipout_box 
+                                                  \__shipout_drop_firstpage_...
+l.313 \subsection
+                 {Nor Circuit Waveform}
+pdfTeX warning (ext4): destination with the same identifier (name{figure.19}) has been already used, duplicate ignored
+<argument> ...shipout:D \box_use:N \l_shipout_box 
+                                                  \__shipout_drop_firstpage_...
+l.313 \subsection
+                 {Nor Circuit Waveform}
+pdfTeX warning (ext4): destination with the same identifier (name{figure.20}) has been already used, duplicate ignored
+<argument> ...shipout:D \box_use:N \l_shipout_box 
+                                                  \__shipout_drop_firstpage_...
+l.313 \subsection
+                 {Nor Circuit Waveform}
+pdfTeX warning (ext4): destination with the same identifier (name{figure.21}) has been already used, duplicate ignored
+<argument> ...shipout:D \box_use:N \l_shipout_box 
+                                                  \__shipout_drop_firstpage_...
+l.313 \subsection
+                 {Nor Circuit Waveform}] (./Xor/xor_gate.v)
+
+Package fancyhdr Warning: \headheight is too small (14.0pt): 
+(fancyhdr)                Make it at least 14.49998pt, for example:
+(fancyhdr)                \setlength{\headheight}{14.49998pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+(fancyhdr)                \addtolength{\topmargin}{-0.49998pt}.
+
+[10
+pdfTeX warning (ext4): destination with the same identifier (name{figure.22}) has been already used, duplicate ignored
+<argument> ...shipout:D \box_use:N \l_shipout_box 
+                                                  \__shipout_drop_firstpage_...
+l.352 ...utlisting[language=Verilog]{Xor/xor_tb.v}
+                                                  
+pdfTeX warning (ext4): destination with the same identifier (name{figure.23}) has been already used, duplicate ignored
+<argument> ...shipout:D \box_use:N \l_shipout_box 
+                                                  \__shipout_drop_firstpage_...
+l.352 ...utlisting[language=Verilog]{Xor/xor_tb.v}
+                                                  
+pdfTeX warning (ext4): destination with the same identifier (name{figure.24}) has been already used, duplicate ignored
+<argument> ...shipout:D \box_use:N \l_shipout_box 
+                                                  \__shipout_drop_firstpage_...
+l.352 ...utlisting[language=Verilog]{Xor/xor_tb.v}
+                                                  
+pdfTeX warning (ext4): destination with the same identifier (name{figure.25}) has been already used, duplicate ignored
+<argument> ...shipout:D \box_use:N \l_shipout_box 
+                                                  \__shipout_drop_firstpage_...
+l.352 ...utlisting[language=Verilog]{Xor/xor_tb.v}
+                                                  ] (./Xor/xor_tb.v)
+<Xor/xor_wave.png, id=420, 685.8122pt x 92.59593pt>
+File: Xor/xor_wave.png Graphic file (type png)
+<use Xor/xor_wave.png>
+Package pdftex.def Info: Xor/xor_wave.png  used on input line 359.
+(pdftex.def)             Requested size: 430.00462pt x 58.0588pt.
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+
+
+Package fancyhdr Warning: \headheight is too small (14.0pt): 
+(fancyhdr)                Make it at least 14.49998pt, for example:
+(fancyhdr)                \setlength{\headheight}{14.49998pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+(fancyhdr)                \addtolength{\topmargin}{-0.49998pt}.
+
+[11]
+<Xor/xor_wave1.png, id=457, 689.57625pt x 84.315pt>
+File: Xor/xor_wave1.png Graphic file (type png)
+<use Xor/xor_wave1.png>
+Package pdftex.def Info: Xor/xor_wave1.png  used on input line 367.
+(pdftex.def)             Requested size: 430.00462pt x 52.57707pt.
+<Xor/xor_wave2.png, id=458, 706.89093pt x 87.32625pt>
+File: Xor/xor_wave2.png Graphic file (type png)
+<use Xor/xor_wave2.png>
+Package pdftex.def Info: Xor/xor_wave2.png  used on input line 375.
+(pdftex.def)             Requested size: 430.00462pt x 53.12102pt.
+ (./Xnor/xnor_gate.v)
+
+Package fancyhdr Warning: \headheight is too small (14.0pt): 
+(fancyhdr)                Make it at least 14.49998pt, for example:
+(fancyhdr)                \setlength{\headheight}{14.49998pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+(fancyhdr)                \addtolength{\topmargin}{-0.49998pt}.
+
+[12
+pdfTeX warning (ext4): destination with the same identifier (name{figure.26}) has been already used, duplicate ignored
+<argument> ...shipout:D \box_use:N \l_shipout_box 
+                                                  \__shipout_drop_firstpage_...
+l.384  T
+        o test the Xnor circuit, we have created two registers A and B, as w...
+pdfTeX warning (ext4): destination with the same identifier (name{figure.27}) has been already used, duplicate ignored
+<argument> ...shipout:D \box_use:N \l_shipout_box 
+                                                  \__shipout_drop_firstpage_...
+l.384  T
+        o test the Xnor circuit, we have created two registers A and B, as w...
+pdfTeX warning (ext4): destination with the same identifier (name{figure.28}) has been already used, duplicate ignored
+<argument> ...shipout:D \box_use:N \l_shipout_box 
+                                                  \__shipout_drop_firstpage_...
+l.384  T
+        o test the Xnor circuit, we have created two registers A and B, as w... <./Xor/xor_wave.png> <./Xor/xor_wave1.png> <./Xor/xor_wave2.png>] (./Xnor/xnor_tb.v)
+<Xnor/XNOR-0ns.png, id=480, 1021.8175pt x 130.4875pt>
+File: Xnor/XNOR-0ns.png Graphic file (type png)
+<use Xnor/XNOR-0ns.png>
+Package pdftex.def Info: Xnor/XNOR-0ns.png  used on input line 392.
+(pdftex.def)             Requested size: 430.00462pt x 54.91188pt.
+
+Underfull \vbox (badness 1117) has occurred while \output is active []
+
+
+
+Package fancyhdr Warning: \headheight is too small (14.0pt): 
+(fancyhdr)                Make it at least 14.49998pt, for example:
+(fancyhdr)                \setlength{\headheight}{14.49998pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+(fancyhdr)                \addtolength{\topmargin}{-0.49998pt}.
+
+[13]
+<Xnor/XNOR-20ns.png, id=523, 1034.86626pt x 101.37875pt>
+File: Xnor/XNOR-20ns.png Graphic file (type png)
+<use Xnor/XNOR-20ns.png>
+Package pdftex.def Info: Xnor/XNOR-20ns.png  used on input line 400.
+(pdftex.def)             Requested size: 430.00462pt x 42.12398pt.
+<Xnor/XNOR-40ns.png, id=524, 1030.85126pt x 86.3225pt>
+File: Xnor/XNOR-40ns.png Graphic file (type png)
+<use Xnor/XNOR-40ns.png>
+Package pdftex.def Info: Xnor/XNOR-40ns.png  used on input line 408.
+(pdftex.def)             Requested size: 430.00462pt x 36.00755pt.
+ (./Addition/addition.v
+
+Package fancyhdr Warning: \headheight is too small (14.0pt): 
+(fancyhdr)                Make it at least 14.49998pt, for example:
+(fancyhdr)                \setlength{\headheight}{14.49998pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+(fancyhdr)                \addtolength{\topmargin}{-0.49998pt}.
+
+[14
+pdfTeX warning (ext4): destination with the same identifier (name{figure.29}) has been already used, duplicate ignored
+<argument> ...shipout:D \box_use:N \l_shipout_box 
+                                                  \__shipout_drop_firstpage_...
+l.6  
+        input [3:0] B,         // 4-bit input B
+pdfTeX warning (ext4): destination with the same identifier (name{figure.30}) has been already used, duplicate ignored
+<argument> ...shipout:D \box_use:N \l_shipout_box 
+                                                  \__shipout_drop_firstpage_...
+l.6  
+        input [3:0] B,         // 4-bit input B
+pdfTeX warning (ext4): destination with the same identifier (name{figure.31}) has been already used, duplicate ignored
+<argument> ...shipout:D \box_use:N \l_shipout_box 
+                                                  \__shipout_drop_firstpage_...
+l.6  
+        input [3:0] B,         // 4-bit input B <./Xnor/XNOR-0ns.png> <./Xnor/XNOR-20ns.png> <./Xnor/XNOR-40ns.png>]) (./Addition/addition_tb.v
+
+Package fancyhdr Warning: \headheight is too small (14.0pt): 
+(fancyhdr)                Make it at least 14.49998pt, for example:
+(fancyhdr)                \setlength{\headheight}{14.49998pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+(fancyhdr)                \addtolength{\topmargin}{-0.49998pt}.
+
+[15]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+
+
+Package fancyhdr Warning: \headheight is too small (14.0pt): 
+(fancyhdr)                Make it at least 14.49998pt, for example:
+(fancyhdr)                \setlength{\headheight}{14.49998pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+(fancyhdr)                \addtolength{\topmargin}{-0.49998pt}.
+
+[16])
+<Addition/addition_wave.png, id=623, 424.58624pt x 116.68594pt>
+File: Addition/addition_wave.png Graphic file (type png)
+<use Addition/addition_wave.png>
+Package pdftex.def Info: Addition/addition_wave.png  used on input line 426.
+(pdftex.def)             Requested size: 430.00462pt x 118.18123pt.
+<Addition/addition_wave1.png, id=624, 414.04688pt x 109.91063pt>
+File: Addition/addition_wave1.png Graphic file (type png)
+<use Addition/addition_wave1.png>
+Package pdftex.def Info: Addition/addition_wave1.png  used on input line 434.
+(pdftex.def)             Requested size: 430.00462pt x 114.15004pt.
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+
+
+Package fancyhdr Warning: \headheight is too small (14.0pt): 
+(fancyhdr)                Make it at least 14.49998pt, for example:
+(fancyhdr)                \setlength{\headheight}{14.49998pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+(fancyhdr)                \addtolength{\topmargin}{-0.49998pt}.
+
+[17
+pdfTeX warning (ext4): destination with the same identifier (name{figure.32}) has been already used, duplicate ignored
+<argument> ...shipout:D \box_use:N \l_shipout_box 
+                                                  \__shipout_drop_firstpage_...
+l.438 
+       <./Addition/addition_wave.png>]
+<Addition/addition_wave2.png, id=645, 489.32813pt x 115.93312pt>
+File: Addition/addition_wave2.png Graphic file (type png)
+<use Addition/addition_wave2.png>
+Package pdftex.def Info: Addition/addition_wave2.png  used on input line 442.
+(pdftex.def)             Requested size: 430.00462pt x 101.87993pt.
+ (./Multiplication/multiplication.v
+
+Package fancyhdr Warning: \headheight is too small (14.0pt): 
+(fancyhdr)                Make it at least 14.49998pt, for example:
+(fancyhdr)                \setlength{\headheight}{14.49998pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+(fancyhdr)                \addtolength{\topmargin}{-0.49998pt}.
+
+[18
+pdfTeX warning (ext4): destination with the same identifier (name{figure.33}) has been already used, duplicate ignored
+<argument> ...shipout:D \box_use:N \l_shipout_box 
+                                                  \__shipout_drop_firstpage_...
+l.9  
+        wire [7:0] full_product;    // 8-bit wire to hold the full product
+pdfTeX warning (ext4): destination with the same identifier (name{figure.34}) has been already used, duplicate ignored
+<argument> ...shipout:D \box_use:N \l_shipout_box 
+                                                  \__shipout_drop_firstpage_...
+l.9  
+        wire [7:0] full_product;    // 8-bit wire to hold the full product <./Addition/addition_wave1.png> <./Addition/addition_wave2.png>]) (./Multiplication/multiplication_tb.v
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+
+
+Package fancyhdr Warning: \headheight is too small (14.0pt): 
+(fancyhdr)                Make it at least 14.49998pt, for example:
+(fancyhdr)                \setlength{\headheight}{14.49998pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+(fancyhdr)                \addtolength{\topmargin}{-0.49998pt}.
+
+[19])
+<Multiplication/multiplication_wave.png, id=700, 471.26062pt x 106.14656pt>
+File: Multiplication/multiplication_wave.png Graphic file (type png)
+<use Multiplication/multiplication_wave.png>
+Package pdftex.def Info: Multiplication/multiplication_wave.png  used on input line 458.
+(pdftex.def)             Requested size: 430.00462pt x 96.8559pt.
+<Multiplication/multiplication_wave1.png, id=701, 548.0475pt x 101.62968pt>
+File: Multiplication/multiplication_wave1.png Graphic file (type png)
+<use Multiplication/multiplication_wave1.png>
+Package pdftex.def Info: Multiplication/multiplication_wave1.png  used on input line 466.
+(pdftex.def)             Requested size: 430.00462pt x 79.74069pt.
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+
+
+Package fancyhdr Warning: \headheight is too small (14.0pt): 
+(fancyhdr)                Make it at least 14.49998pt, for example:
+(fancyhdr)                \setlength{\headheight}{14.49998pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+(fancyhdr)                \addtolength{\topmargin}{-0.49998pt}.
+
+[20
+pdfTeX warning (ext4): destination with the same identifier (name{figure.35}) has been already used, duplicate ignored
+<argument> ...shipout:D \box_use:N \l_shipout_box 
+                                                  \__shipout_drop_firstpage_...
+l.470 
+       <./Multiplication/multiplication_wave.png>]
+<Multiplication/multiplication_wave2.png, id=725, 618.81187pt x 99.37125pt>
+File: Multiplication/multiplication_wave2.png Graphic file (type png)
+<use Multiplication/multiplication_wave2.png>
+Package pdftex.def Info: Multiplication/multiplication_wave2.png  used on input line 474.
+(pdftex.def)             Requested size: 430.00462pt x 69.05447pt.
+ (./Subtraction/subtraction.v) (./Subtraction/subtraction_tb.v
+
+Package fancyhdr Warning: \headheight is too small (14.0pt): 
+(fancyhdr)                Make it at least 14.49998pt, for example:
+(fancyhdr)                \setlength{\headheight}{14.49998pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+(fancyhdr)                \addtolength{\topmargin}{-0.49998pt}.
+
+[21
+pdfTeX warning (ext4): destination with the same identifier (name{figure.36}) has been already used, duplicate ignored
+<argument> ...shipout:D \box_use:N \l_shipout_box 
+                                                  \__shipout_drop_firstpage_...
+l.6  
+        reg [3:0] A;     // 4-bit input A
+pdfTeX warning (ext4): destination with the same identifier (name{figure.37}) has been already used, duplicate ignored
+<argument> ...shipout:D \box_use:N \l_shipout_box 
+                                                  \__shipout_drop_firstpage_...
+l.6  
+        reg [3:0] A;     // 4-bit input A <./Multiplication/multiplication_wave1.png> <./Multiplication/multiplication_wave2.png>])
+<Subtraction/Subtraction-0ns.png, id=752, 1037.8775pt x 111.41624pt>
+File: Subtraction/Subtraction-0ns.png Graphic file (type png)
+<use Subtraction/Subtraction-0ns.png>
+Package pdftex.def Info: Subtraction/Subtraction-0ns.png  used on input line 491.
+(pdftex.def)             Requested size: 430.00462pt x 46.16206pt.
+<Subtraction/Subtraction-20ns.png, id=753, 1029.8475pt x 109.40875pt>
+File: Subtraction/Subtraction-20ns.png Graphic file (type png)
+<use Subtraction/Subtraction-20ns.png>
+Package pdftex.def Info: Subtraction/Subtraction-20ns.png  used on input line 499.
+(pdftex.def)             Requested size: 430.00462pt x 45.68257pt.
+<Subtraction/Subtraction-40ns.png, id=754, 1027.84pt x 106.3975pt>
+File: Subtraction/Subtraction-40ns.png Graphic file (type png)
+<use Subtraction/Subtraction-40ns.png>
+Package pdftex.def Info: Subtraction/Subtraction-40ns.png  used on input line 507.
+(pdftex.def)             Requested size: 430.00462pt x 44.51292pt.
+
+
+Package fancyhdr Warning: \headheight is too small (14.0pt): 
+(fancyhdr)                Make it at least 14.49998pt, for example:
+(fancyhdr)                \setlength{\headheight}{14.49998pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+(fancyhdr)                \addtolength{\topmargin}{-0.49998pt}.
+
+[22
+pdfTeX warning (ext4): destination with the same identifier (name{figure.38}) has been already used, duplicate ignored
+<argument> ...shipout:D \box_use:N \l_shipout_box 
+                                                  \__shipout_drop_firstpage_...
+l.510  \end{figure}
+                   
+pdfTeX warning (ext4): destination with the same identifier (name{figure.39}) has been already used, duplicate ignored
+<argument> ...shipout:D \box_use:N \l_shipout_box 
+                                                  \__shipout_drop_firstpage_...
+l.510  \end{figure}
+                    <./Subtraction/Subtraction-0ns.png> <./Subtraction/Subtraction-20ns.png>]
+
+Package fancyhdr Warning: \headheight is too small (14.0pt): 
+(fancyhdr)                Make it at least 14.49998pt, for example:
+(fancyhdr)                \setlength{\headheight}{14.49998pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+(fancyhdr)                \addtolength{\topmargin}{-0.49998pt}.
+
+[23
+pdfTeX warning (ext4): destination with the same identifier (name{figure.40}) has been already used, duplicate ignored
+<argument> ...shipout:D \box_use:N \l_shipout_box 
+                                                  \__shipout_drop_firstpage_...
+l.518 \end{document}
+                     <./Subtraction/Subtraction-40ns.png>] (./Report.aux)
+ ***********
+LaTeX2e <2023-11-01> patch level 1
+L3 programming layer <2024-02-20>
+ ***********
+
+
+LaTeX Warning: There were multiply-defined labels.
+
+Package rerunfilecheck Info: File `Report.out' has not changed.
+(rerunfilecheck)             Checksum: 045A221517834D31871CA51B32B6BD36;4789.
+ ) 
 Here is how much of TeX's memory you used:
- 14281 strings out of 474116
- 230843 string characters out of 5732613
- 1930187 words of memory out of 5000000
- 36379 multiletter control sequences out of 15000+600000
- 591634 words of font info for 99 fonts, out of 8000000 for 9000
+ 15762 strings out of 474116
+ 252935 string characters out of 5732613
+ 2295187 words of memory out of 5000000
+ 37178 multiletter control sequences out of 15000+600000
+ 606184 words of font info for 156 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 79i,8n,93p,1060b,450s stack positions out of 10000i,1000n,20000p,200000b,200000s
-/Users/brianlee/Documents/architecture/ALU-project/Step2/Report.tex:91:  ==> Fatal error occurred, no output PDF file produced!
+ 79i,13n,93p,1060b,2068s stack positions out of 10000i,1000n,20000p,200000b,200000s
+</opt/homebrew/Cellar/texlive/20240312_1/share/texmf-dist/fonts/type1/public/cm-super/sftt0900.pfb></opt/homebrew/Cellar/texlive/20240312_1/share/texmf-dist/fonts/type1/urw/times/utmb8a.pfb></opt/homebrew/Cellar/texlive/20240312_1/share/texmf-dist/fonts/type1/urw/times/utmr8a.pfb>
+Output written on Report.pdf (26 pages, 488790 bytes).
+PDF statistics:
+ 921 PDF objects out of 1000 (max. 8388607)
+ 830 compressed objects within 9 object streams
+ 525 named destinations out of 1000 (max. 500000)
+ 43889 words of extra memory for PDF output out of 51595 (max. 10000000)
+
