@@ -91,45 +91,40 @@ The 2x4 shift circuit takes a 4-bit input and shifts the bits left or right by u
 \subsection{Shift Circuit Verilog Code}
 \lstinputlisting[language=Verilog]{2x4Shifter/shift_tb.v}
 
-To test the Shift circuit we have created 2 registers, one for the input and one for the shifting then one wire for the output. If this circuit works properly the output should display the input shifted to the left and zeros filling the shifted positions.
+To test the Shift circuit we have created 3 input registers, and 1 output. Input A is 4bits, being the input that we want to shift, next input, amt, is 2 bits, being the amount that we want to shift A by, and the last input, dir, is the direction we want to shift, being 0 for left and 1 for right. It will then output the resulting shifted bits into Y, and we will know if its working correctly if Y is a shifted version of A in the direction and the amount specified.
 \lstinputlisting[language=Verilog]{2x4Shifter/shift_tb.v}
 
 
 \subsection{Shift Circuit Waveforms}
 
-At 0 ns, we can see that A is 0, so the output Y is 0.
+At 10 ns, we can see that A is 1010, amt is 01 (1), and dir is 0 (left), so the output Y is 0100.
 \begin{figure}[H]
     \centering
     \includegraphics[width = 1.0\textwidth]{2x4Shifter/shift_wave.PNG}
-    \caption{Shift Circuit with marker at 0ns}
+    \caption{Shift Circuit with marker at 10ns}
     \label{fig:shift-wave1}
 \end{figure}
 
-At 10 ns, A is 1 (0001), so Y becomes 2 (0010).
+At 20 ns, we can see that A is 1010, amt is 10 (2), and dir is 0 (left), so the output Y is 1000.
 \begin{figure}[H]
     \centering
     \includegraphics[width = 1.0\textwidth]{2x4Shifter/shift_wave1.PNG}
-    \caption{Shift Circuit with marker at 10ns}
+    \caption{Shift Circuit with marker at 20ns}
     \label{fig:shift-wave2}
 \end{figure}
 
-At 20 ns, A is 2 (0010), so Y becomes 4 (0100).
+At 30 ns, we can see that A is 1010, amt is 01 (1), and dir is 1 (right), so the output Y is 0101.
 \begin{figure}[H]
     \centering
     \includegraphics[width = 1.0\textwidth]{2x4Shifter/shift_wave2.PNG}
-    \caption{Shift Circuit with marker at 20ns}
+    \caption{Shift Circuit with marker at 30ns}
     \label{fig:shift-wave3}
 \end{figure}
 
 \section{Not Circuit}
 The Not circuit takes one input A, with an output Y. This will output a 0 if A is a 1, and will output 1 if A is a 0.
 
-```\begin{figure}[H]
-    \centering
-    %\includegraphics[width = 1.0\textwidth]{Not/NOT.png}
-    \caption{Not truth table and gate}
-    \label{fig:shift-table}
-\end{figure}
+
 
 \subsection{Not Circuit Verilog Code}
 \lstinputlisting[language=Verilog]{Not/not_gate.v}
@@ -165,12 +160,7 @@ At 40 ns, A becomes the 5h(0101), so Y becomes the hex value Ah(1010).
 \section{And Circuit}
 
 The And circuit takes two 4-bit inputs A and B, with a 4-bit output Y. A and B will undergo the bitwise And operation, and the result will be output to Y.
-```\begin{figure}[H]
-    \centering
-    %\includegraphics[width = 1.0\textwidth]{Truth-Tables/AndTT.PNG}
-    \caption{And truth table and gate}
-    \label{fig:shift-table}
-\end{figure}
+
 \subsection{And Circuit Verilog Code} 
 \lstinputlisting[language=Verilog]{And/and_gate.v} 
 
@@ -246,98 +236,70 @@ At 2500ns, A and B are both F (1111), so Y is 0000.
 
  \section{Or Circuit}
  The Or circuit takes two 4-bit inputs A and B, and has a 4-bit output Y. Each bit of Y is the result of a bitwise OR operation applied between corresponding bits in A and B.
-```\begin{figure}[H]
-    \centering
-    %\includegraphics[width = 1.0\textwidth]{Truth-Tables/NorTT.PNG}
-    \caption{Or truth table and gate}
-    \label{fig:shift-table}
-\end{figure}
+
 
 \subsection{Or Circuit Verilog Code}
-\lstinputlisting[language=Verilog]{or/or_gate.v}
+\lstinputlisting[language=Verilog]{Or/or_gate.v}
 
-To test the Nor circuit, we have created two registers, A and B, as well as a wire Y. This way we are able to take two inputs at a time and test each possible input for the circuit. We'll know if this is working correctly if Y returns 1 for the test where A and B are 0 and Y should return 0 for the rest.
-%\lstinputlisting[language=Verilog]{or/or_tb.v}
+To test the Or circuit, we have created two registers A and B, as well as a wire Y. We then create a for loop to produce all 16 possible values for A and B. We will know that our And circuit is behaving as expected if Y produces correct values for all combinations of A and B. 
+\lstinputlisting[language=Verilog]{Or/or_tb.v}
 \subsection{Or Circuit Waveform}
 
-At 0 ns, A and B are 0, so Y is 1.
+At 160 ns, A is 1 (0001) and B is 0 (0000), so Y is 1 (0001).
 \begin{figure}[H]
     \centering
-%    \includegraphics[width = 1.0\textwidth]{or/or_wave1.PNG}
-    \caption{Nor Circuit with marker at 0ns}
+    \includegraphics[width = 1.0\textwidth]{Or/or_wave.PNG}
+    \caption{Nor Circuit with marker at 160ns}
     \label{fig:enter-label}
 \end{figure}
 
-At 10 ns, A is 0 and B is 1, so Y is now 0.
+At 1650 ns, A is A (1010) and B is 5 (0101), so Y is now F (1111).
 \begin{figure}[H]
     \centering
- %   \includegraphics[width = 1.0\textwidth]{or/or_wave2.PNG}
-    \caption{Nor Circuit with marker at 10ns}
+    \includegraphics[width = 1.0\textwidth]{Or/or_wave1.PNG}
+    \caption{Nor Circuit with marker at 1650ns}
     \label{fig:enter-label}
 \end{figure}
 
-At 20 ns, A is 1 and B is 0, so Y is still 0.
+At 2400 ns, A is F (1111) and B is 0 (0000), so Y is now F (1111).
 \begin{figure}[H]
     \centering
-%    \includegraphics[width = 1.0\textwidth]{or/or_wave3.PNG}
-    \caption{Nor Circuit with marker at 20ns}
-    \label{fig:enter-label}
-\end{figure}
-
-At 30 ns, both A and B are 1, so Y again stays 0.
-\begin{figure}[H]
-    \centering
-%    \includegraphics[width = 1.0\textwidth]{or/or_wave4.PNG}
-    \caption{Or Circuit with marker at 30ns}
+    \includegraphics[width = 1.0\textwidth]{Or/or_wave2.PNG}
+    \caption{Nor Circuit with marker at 2400ns}
     \label{fig:enter-label}
 \end{figure}
 
  \section{Nor Circuit}
-The Nor circuit takes two inputs, A and B, with an output Y. This will output a 0 if either A or B is a 1, and will only output 1 if A and B are both 0.
-
-```\begin{figure}[H]
-    \centering
-    %\includegraphics[width = 1.0\textwidth]{Truth-Tables/NorTT.PNG}
-    \caption{Nor truth table and gate}
-    \label{fig:shift-table}
-\end{figure}
+ The Or circuit takes two 4-bit inputs A and B, and has a 4-bit output Y. Each bit of Y is the result of the opposite of a bitwise OR operation applied between corresponding bits in A and B.
 
 \subsection{Nor Circuit Verilog Code}
-\lstinputlisting[language=Verilog]{nor/nor_gate.v}
+\lstinputlisting[language=Verilog]{Nor/nor_gate.v}
 
-To test the Nor circuit, we have created two registers, A and B, as well as a wire Y. This way we are able to take two inputs at a time and test each possible input for the circuit. We'll know if this is working correctly if Y returns 1 for the test where A and B are 0 and Y should return 0 for the rest.
-%\lstinputlisting[language=Verilog]{nor/nor_tb.v}
+To test the Nor circuit, we have created two registers A and B, as well as a wire Y. We then create a for loop to produce all 16 possible values for A and B. We will know that our And circuit is behaving as expected if Y produces correct values for all combinations of A and B. 
+\lstinputlisting[language=Verilog]{Nor/nor_tb.v}
 \subsection{Nor Circuit Waveform}
 
-At 0 ns, A and B are 0, so Y is 1.
+At 0ns, A and B are both 0000, so Y is F (1111).
 \begin{figure}[H]
     \centering
-%    \includegraphics[width = 1.0\textwidth]{nor/nor_wave1.PNG}
+    \includegraphics[width = 1.0\textwidth]{Nor/nor_wave.PNG}
     \caption{Nor Circuit with marker at 0ns}
     \label{fig:enter-label}
 \end{figure}
 
-At 10 ns, A is 0 and B is 1, so Y is now 0.
+At 2400ns, A is F (1111) and B is 0 (0000), so Y is 0 (0000).
 \begin{figure}[H]
     \centering
- %   \includegraphics[width = 1.0\textwidth]{nor/nor_wave2.PNG}
-    \caption{Nor Circuit with marker at 10ns}
+    \includegraphics[width = 1.0\textwidth]{Nor/nor_wave1.PNG}
+    \caption{Nor Circuit with marker at 2400ns}
     \label{fig:enter-label}
 \end{figure}
 
-At 20 ns, A is 1 and B is 0, so Y is still 0.
+At 1600ns, A is A (1010) and B is 0 (0000), so Y is 5 (0101).
 \begin{figure}[H]
     \centering
-%    \includegraphics[width = 1.0\textwidth]{nor/nor_wave3.PNG}
-    \caption{Nor Circuit with marker at 20ns}
-    \label{fig:enter-label}
-\end{figure}
-
-At 30 ns, both A and B are 1, so Y again stays 0.
-\begin{figure}[H]
-    \centering
-%    \includegraphics[width = 1.0\textwidth]{nor/nor_wave4.PNG}
-    \caption{Nor Circuit with marker at 30ns}
+    \includegraphics[width = 1.0\textwidth]{Nor/nor_wave2.PNG}
+    \caption{Nor Circuit with marker at 1600ns}
     \label{fig:enter-label}
 \end{figure}
 
@@ -507,34 +469,34 @@ At 0ns, A is Ch (1100) and B is 5h (0101), so Y = 7h (0111)
  \end{figure}
 
  \section{Division Circuit}
- The Multiplication circuit takes two 4-bit inputs A and B, and produces two 4-bit outputs, product low and product high, representing the high and low 4 bits of the product of A and B. The circuit has an intermediary 8-bit variable, full product, which is used to extract the low and high 4 bits of the product. First, full product is assigned to the product of A and B. Then, product low is assigned the first 4 bits of full product. Then, product high is assigned the last 4 bits of full product. 
+ The Division circuit takes two 4-bit inputs A and B, and produces two 4-bit outputs, quotient (Q) and remainder (R). The circuit first calculates how many times B can go into A, becoming Q, then it takes Q amount of B's away from A and the resulting number is R.
  \lstinputlisting[language=Verilog]{Division/division.v} 
  
- To test the Multiplication circuit, we have created two registers A and B,and two wires product low and product high. We then perform 5 tests with A and B at various values. We will know that the Multiplication circuit is working as expected if product low, product high produces correct results for every combination of A times B that we have tested. For example, if A is 1111 and B is 1111, then the expected result: product high is 1110, product low is 0001 for a decimal value of 225.
+ To test the Division circuit, we have created two registers A and B,and two wires quotient (Q) and remainder (R). We then perform 5 tests with A and B at various values. We will know that the Division circuit is working as expected if quotient and remainder produces correct results for every combination of A times B that we have tested. 
  \lstinputlisting[language=Verilog]{Division/division_tb.v}
  \subsection{Multiplication Circuit Waveform} 
  
- At 2ns, A is 2 and B is 3, so product high is 0 and product low is 6.  
+ At 0ns, A is 0 and B is 1, so the quotient is 0 and the remainder is also 0.
  \begin{figure}[H]
   \centering
-  \includegraphics[width = 1.0\textwidth]{Multiplication/multiplication_wave.png}
-  \caption{Multiplication Circuit with marker at 2ns}
+  \includegraphics[width = 1.0\textwidth]{Division/division_wave.png}
+  \caption{Division Circuit with marker at 0ns}
   \label{fig:enter-label} 
  \end{figure} 
  
- At 20ns, A is 6 and B is 3, so product upper is 0001 and product lower is 0010 for a decimal value of 18.  
+ At 20ns, A is 4 and B is 2, so the quotient is 2 and the remainder is 0.
   \begin{figure}[H]
   \centering 
- \includegraphics[width = 1.0\textwidth]{Multiplication/multiplication_wave1.png}
-  \caption{Multiplication Circuit with marker at 20ns}
+ \includegraphics[width = 1.0\textwidth]{Division/division_wave1.png}
+  \caption{Division Circuit with marker at 20ns}
   \label{fig:enter-label}
   \end{figure}
  
-  At 40ns, A and B are both F, so product upper is E and product lower is 0001 for a decimal value of 256.
+  At 30ns, A is 7 and B is 4, so the quotient is 1 and the remainder is 3.
   \begin{figure}[H]
   \centering 
- \includegraphics[width = 1.0\textwidth]{Multiplication/multiplication_wave2.png}
-  \caption{Multiplication Circuit with marker at 40ns}
+ \includegraphics[width = 1.0\textwidth]{Division/division_wave2.png}
+  \caption{Division Circuit with marker at 30ns}
   \label{fig:enter-label}
   \end{figure}
 
