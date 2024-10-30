@@ -202,7 +202,7 @@ The Nand circuit takes two 4-bit inputs A and B, with a 4-bit output Y. A and B 
     \caption{And truth table and gate}
     \label{fig:shift-table}
 \end{figure}
-\subsection{Nanad Circuit Verilog Code} 
+\subsection{Nand Circuit Verilog Code} 
 \lstinputlisting[language=Verilog]{Nand/nand_gate.v} 
 
 To test the Nand circuit, we have created two registers A and B, as well as a wire Y. We then create a for loop to produce all 16 possible values for A and B. We will know that our Nand circuit is behaving as expected if Y produces correct values for all combinations of A and B. For example, if A=0001 and B=0001, the expected result for Y is 1110. 
