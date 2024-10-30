@@ -161,6 +161,13 @@ At 40 ns, A becomes the 5h(0101), so Y becomes the hex value Ah(1010).
 
 The And circuit takes two 4-bit inputs A and B, with a 4-bit output Y. A and B will undergo the bitwise And operation, and the result will be output to Y.
 
+\begin{figure}[H]
+    \centering
+    \includegraphics[width = 1.0\textwidth]{And/and-truth.jpeg}
+    \caption{And truth table and gate}
+    \label{fig:shift-table}
+\end{figure}
+
 \subsection{And Circuit Verilog Code} 
 \lstinputlisting[language=Verilog]{And/and_gate.v} 
 
@@ -196,12 +203,7 @@ At 2550ns, A and B are both F (1111), so Y is also F (1111).
 \section{Nand Circuit}
 
 The Nand circuit takes two 4-bit inputs A and B, with a 4-bit output Y. A and B will undergo the bitwise Nand operation, and the result will be output to Y.
-```\begin{figure}[H]
-    \centering
-    \includegraphics[width = 1.0\textwidth]{And/and-truth.jpeg}
-    \caption{And truth table and gate}
-    \label{fig:shift-table}
-\end{figure}
+
 \subsection{Nand Circuit Verilog Code} 
 \lstinputlisting[language=Verilog]{Nand/nand_gate.v} 
 
