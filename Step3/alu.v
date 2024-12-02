@@ -1,76 +1,84 @@
-module alu (
-    input [3:0] A, B,       // 4-bit inputs
-    input carry_in,         // Carry input for addition
-    input [1:0] shift_amt,  // 2-bit shift amount
-    input shift_dir,        // Shift direction (0=left, 1=right)
-    input [3:0] opcode,     // 4-bit control signal
-    output reg [3:0] Y,     // 4-bit result output
-    output reg carry_out,   // Carry-out for addition
-    output reg valid_div,   // Valid flag for division
-    output reg [3:0] remainder, // Remainder from division
-    output reg [3:0] product_low, // Multiplication low part
-    output reg [3:0] product_high // Multiplication high part
+module addition (
+    input [3:0] A,         // 4-bit input A
+    input [3:0] B,         // 4-bit input B
+    input carry_in,        // 1-bit carry in
+    output [3:0] Sum,      // 4-bit sum output
+    output carry_out       // 1-bit carry out
 );
 
-    // Intermediate wires for all module outputs
-    wire [3:0] logic_out, arithmetic_out, shift_out;
-    wire [3:0] quotient_out, remainder_out;
-    wire add_carry_out;
+    wire [4:0] full_sum;   // 5-bit sum to accommodate carry-out
 
-    // Instantiate Logic Modules
-    and_4bit u_and (.Y(logic_out), .A(A), .B(B));
-    or_4bit u_or (.Y(logic_out), .A(A), .B(B));  // Example for OR logic
-    // Add other logic modules as needed
+    // Perform the addition with carry_in
+    assign full_sum = A + B + carry_in;
+    
+    // Assign the lower 4 bits of the sum to the Sum output
+    assign Sum = full_sum[3:0];
+    
+    // The 5th bit is the carry_out
+    assign carry_out = full_sum[4];
 
-    // Instantiate Arithmetic Modules
-    addition u_add (.A(A), .B(B), .carry_in(carry_in), .Sum(arithmetic_out), .carry_out(add_carry_out));
-    subtraction u_sub (.Y(arithmetic_out), .A(A), .B(B)); // Example for subtraction
-    multiplication u_mul (.A(A), .B(B), .product_low(product_low), .product_high(product_high));  // Multiplication
-    division u_div (.dividend(A), .divisor(B), .quotient(quotient_out), .remainder(remainder_out), .valid(valid_div)); // Division
+endmodule
 
-    // Instantiate Shift Modules
-    shift_2x4bit u_shift (.A(A), .amt(shift_amt), .dir(shift_dir), .Y(shift_out));
+module subtraction (Y, A, B);
+    output [3:0] Y;  // 4-bit output
+    input  [3:0] A;  // 4-bit input A
+    input  [3:0] B;  // 4-bit input B
 
-    // Control Circuit Logic (using opcode to select the operation)
+    assign Y = A - B;  // Perform 4-bit subtraction
+
+endmodule
+
+module multiplication (
+    input [3:0] A, B,   
+    output [3:0] product_low,   // Lower 4 bits of the product
+    output [3:0] product_high   // Upper 4 bits of the product
+);
+    wire [7:0] full_product;    // 8-bit wire to hold the full product
+    
+    assign full_product = A * B;
+    assign product_low = full_product[3:0];   // Lower 4 bits
+    assign product_high = full_product[7:4];  // Upper 4 bits
+endmodule
+
+module division (
+    input [3:0] dividend,
+    input [3:0] divisor,
+    output reg [3:0] quotient,
+    output reg [3:0] remainder,
+    output reg valid
+);
+    reg [3:0] temp_dividend;
+    reg [3:0] temp_quotient;
+    
+    integer i;
+
     always @(*) begin
-        carry_out = 1'b0;
-        valid_div = 1'b0;
+        quotient = 4'b0000;
         remainder = 4'b0000;
-        product_low = 4'b0000;
-        product_high = 4'b0000;
+        valid = 1'b0;
 
-        case (opcode[3:2])  // Select operation type (Logic, Arithmetic, Shift, Division)
-            2'b00: begin    // Logic operations
-                case (opcode[1:0]) 
-                    2'b00: Y = logic_out; // AND operation
-                    2'b01: Y = logic_out; // OR operation
-                    // Add more logic operations as needed
-                    default: Y = 4'b0000; // Default
-                endcase
+        if (divisor == 0) begin
+            valid = 1'b0; 
+            quotient = 4'b0000;
+            remainder = dividend; 
+        end else begin
+            temp_dividend = dividend;
+            temp_quotient = 4'b0000;
+
+            for (i = 3; i >= 0; i = i - 1) begin
+                temp_quotient = {temp_quotient[2:0], temp_dividend[3]};
+                temp_dividend = {temp_dividend[2:0], 1'b0};
+
+                //if (temp_quotient >= divisor) begin
+                //    temp_quotient = temp_quotient - divisor;
+                //    dividend[i:i] = 1'b1;
+                //    end
             end
 
-            2'b01: begin    // Arithmetic operations
-                case (opcode[1:0])
-                    2'b00: begin
-                        Y = arithmetic_out;  // Addition
-                        carry_out = add_carry_out;
-                    end
-                    2'b01: Y = arithmetic_out;  // Subtraction
-                    // Add more arithmetic operations as needed
-                    default: Y = 4'b0000; // Default
-                endcase
-            end
-
-            2'b10: Y = shift_out; // Shift operations
-
-            2'b11: begin  // Division
-                Y = quotient_out;
-                remainder = remainder_out;
-                valid_div = 1'b1;
-            end
-
-            default: Y = 4'b0000; // Default case
-        endcase
+            quotient = temp_quotient;
+            remainder = dividend;
+            valid = 1'b1;
+        end
     end
 endmodule
 
