@@ -1,5 +1,5 @@
 $date
-	Mon Dec  2 12:09:23 2024
+	Mon Dec  2 13:01:12 2024
 $end
 $version
 	Icarus Verilog
@@ -8,122 +8,142 @@ $timescale
 	1ps
 $end
 $scope module testbench $end
-$var wire 1 ! Y $end
-$var wire 4 " Y4 [3:0] $end
+$var wire 4 ! xor4_out [3:0] $end
+$var wire 4 " xnor4_out [3:0] $end
 $var wire 1 # valid $end
-$var wire 1 $ carry_out $end
-$var wire 4 % Sum [3:0] $end
-$var wire 4 & SubResult [3:0] $end
-$var wire 4 ' MulLow [3:0] $end
-$var wire 4 ( MulHigh [3:0] $end
-$var wire 4 ) DivRemainder [3:0] $end
-$var wire 4 * DivQuotient [3:0] $end
-$var reg 1 + A $end
-$var reg 4 , A4 [3:0] $end
-$var reg 1 - B $end
-$var reg 4 . B4 [3:0] $end
-$var reg 2 / amt [1:0] $end
-$var reg 1 0 carry_in $end
-$var reg 1 1 dir $end
-$var reg 4 2 dividend [3:0] $end
-$var reg 4 3 divisor [3:0] $end
+$var wire 4 $ shift4out [3:0] $end
+$var wire 1 % shift1out $end
+$var wire 4 & or4_out [3:0] $end
+$var wire 4 ' not4_out [3:0] $end
+$var wire 1 ( not1_out $end
+$var wire 4 ) nor4_out [3:0] $end
+$var wire 1 * nor1_out $end
+$var wire 4 + nand4_out [3:0] $end
+$var wire 1 , nand1_out $end
+$var wire 1 - carry_out $end
+$var wire 4 . and4_out [3:0] $end
+$var wire 4 / Sum [3:0] $end
+$var wire 4 0 SubResult [3:0] $end
+$var wire 4 1 MulLow [3:0] $end
+$var wire 4 2 MulHigh [3:0] $end
+$var wire 4 3 DivRemainder [3:0] $end
+$var wire 4 4 DivQuotient [3:0] $end
+$var reg 1 5 A $end
+$var reg 4 6 A4 [3:0] $end
+$var reg 1 7 B $end
+$var reg 4 8 B4 [3:0] $end
+$var reg 2 9 amt [1:0] $end
+$var reg 1 : carry_in $end
+$var reg 1 ; dir $end
+$var reg 4 < dividend [3:0] $end
+$var reg 4 = divisor [3:0] $end
 $scope module uut_addition $end
-$var wire 4 4 A [3:0] $end
-$var wire 4 5 B [3:0] $end
-$var wire 1 0 carry_in $end
-$var wire 5 6 full_sum [4:0] $end
-$var wire 1 $ carry_out $end
-$var wire 4 7 Sum [3:0] $end
+$var wire 4 > A [3:0] $end
+$var wire 4 ? B [3:0] $end
+$var wire 1 : carry_in $end
+$var wire 5 @ full_sum [4:0] $end
+$var wire 1 - carry_out $end
+$var wire 4 A Sum [3:0] $end
 $upscope $end
 $scope module uut_and4 $end
-$var wire 4 8 A [3:0] $end
-$var wire 4 9 B [3:0] $end
-$var wire 4 : Y [3:0] $end
-$upscope $end
-$scope module uut_division $end
-$var wire 4 ; dividend [3:0] $end
-$var wire 4 < divisor [3:0] $end
-$var reg 4 = quotient [3:0] $end
-$var reg 4 > remainder [3:0] $end
-$var reg 4 ? temp_dividend [3:0] $end
-$var reg 4 @ temp_quotient [3:0] $end
-$var reg 1 # valid $end
-$var integer 32 A i [31:0] $end
-$upscope $end
-$scope module uut_multiplication $end
 $var wire 4 B A [3:0] $end
 $var wire 4 C B [3:0] $end
-$var wire 4 D product_low [3:0] $end
-$var wire 4 E product_high [3:0] $end
-$var wire 8 F full_product [7:0] $end
+$var wire 4 D Y [3:0] $end
+$upscope $end
+$scope module uut_division $end
+$var wire 4 E dividend [3:0] $end
+$var wire 4 F divisor [3:0] $end
+$var reg 4 G quotient [3:0] $end
+$var reg 4 H remainder [3:0] $end
+$var reg 4 I temp_dividend [3:0] $end
+$var reg 4 J temp_quotient [3:0] $end
+$var reg 1 # valid $end
+$var integer 32 K i [31:0] $end
+$upscope $end
+$scope module uut_multiplication $end
+$var wire 4 L A [3:0] $end
+$var wire 4 M B [3:0] $end
+$var wire 4 N product_low [3:0] $end
+$var wire 4 O product_high [3:0] $end
+$var wire 8 P full_product [7:0] $end
 $upscope $end
 $scope module uut_nand1 $end
-$var wire 1 + A $end
-$var wire 1 - B $end
-$var wire 1 ! Y $end
+$var wire 1 5 A $end
+$var wire 1 7 B $end
+$var wire 1 , Y $end
 $upscope $end
 $scope module uut_nand4 $end
-$var wire 4 G A [3:0] $end
-$var wire 4 H B [3:0] $end
-$var wire 4 I Y [3:0] $end
+$var wire 4 Q A [3:0] $end
+$var wire 4 R B [3:0] $end
+$var wire 4 S Y [3:0] $end
 $upscope $end
 $scope module uut_nor1 $end
-$var wire 1 + A $end
-$var wire 1 - B $end
-$var wire 1 ! Y $end
+$var wire 1 5 A $end
+$var wire 1 7 B $end
+$var wire 1 * Y $end
 $upscope $end
 $scope module uut_nor4 $end
-$var wire 4 J A [3:0] $end
-$var wire 4 K B [3:0] $end
-$var wire 4 L Y [3:0] $end
+$var wire 4 T A [3:0] $end
+$var wire 4 U B [3:0] $end
+$var wire 4 V Y [3:0] $end
 $upscope $end
 $scope module uut_not1 $end
-$var wire 1 + A $end
-$var wire 1 ! Y $end
+$var wire 1 5 A $end
+$var wire 1 ( Y $end
 $upscope $end
 $scope module uut_not4 $end
-$var wire 4 M A [3:0] $end
-$var wire 4 N Y [3:0] $end
+$var wire 4 W A [3:0] $end
+$var wire 4 X Y [3:0] $end
 $upscope $end
 $scope module uut_or4 $end
-$var wire 4 O A [3:0] $end
-$var wire 4 P B [3:0] $end
-$var wire 4 Q Y [3:0] $end
+$var wire 4 Y A [3:0] $end
+$var wire 4 Z B [3:0] $end
+$var wire 4 [ Y [3:0] $end
 $upscope $end
 $scope module uut_shift1 $end
-$var wire 4 R A [3:0] $end
-$var wire 2 S control [1:0] $end
-$var reg 4 T Y [3:0] $end
+$var wire 4 \ A [3:0] $end
+$var wire 2 ] control [1:0] $end
+$var reg 4 ^ Y [3:0] $end
 $upscope $end
 $scope module uut_shift4 $end
-$var wire 4 U A [3:0] $end
-$var wire 2 V amt [1:0] $end
-$var wire 1 1 dir $end
-$var reg 4 W Y [3:0] $end
+$var wire 4 _ A [3:0] $end
+$var wire 2 ` amt [1:0] $end
+$var wire 1 ; dir $end
+$var reg 4 a Y [3:0] $end
 $upscope $end
 $scope module uut_subtraction $end
-$var wire 4 X A [3:0] $end
-$var wire 4 Y B [3:0] $end
-$var wire 4 Z Y [3:0] $end
+$var wire 4 b A [3:0] $end
+$var wire 4 c B [3:0] $end
+$var wire 4 d Y [3:0] $end
 $upscope $end
 $scope module uut_xnor4 $end
-$var wire 4 [ A [3:0] $end
-$var wire 4 \ B [3:0] $end
-$var wire 4 ] Y [3:0] $end
+$var wire 4 e A [3:0] $end
+$var wire 4 f B [3:0] $end
+$var wire 4 g Y [3:0] $end
 $upscope $end
 $scope module uut_xor4 $end
-$var wire 4 ^ A [3:0] $end
-$var wire 4 _ B [3:0] $end
-$var wire 4 ` Y [3:0] $end
+$var wire 4 h A [3:0] $end
+$var wire 4 i B [3:0] $end
+$var wire 4 j Y [3:0] $end
 $upscope $end
 $upscope $end
 $enddefinitions $end
 #0
 $dumpvars
+bx j
+bx i
+bx h
+bx g
+bx f
+bx e
+bx d
+bx c
+bx b
+bx a
 bx `
 bx _
-bx ^
-bx ]
+b0 ^
+bz ]
 bx \
 bx [
 bx Z
@@ -132,8 +152,8 @@ bx X
 bx W
 bx V
 bx U
-b0 T
-bz S
+bx T
+bx S
 bx R
 bx Q
 bx P
@@ -157,140 +177,188 @@ bx ?
 bx >
 bx =
 bx <
-bx ;
-bx :
+x;
+x:
 bx 9
 bx 8
-bx 7
+07
 bx 6
-bx 5
+15
 bx 4
 bx 3
 bx 2
-x1
-x0
+bx 1
+bx 0
 bx /
 bx .
-0-
-bx ,
-1+
-bx *
+x-
+1,
+bx +
+0*
 bx )
-bx (
+0(
 bx '
 bx &
-bx %
-x$
+0%
+bx $
 x#
 bx "
-x!
+bx !
 $end
 #30000
-b1000 '
+b111 +
+b111 S
+b1 )
+b1 V
+b1001 "
+b1001 g
+b1000 1
+b1000 N
+b111 2
+b111 O
+b1000 .
 b1000 D
-b111 (
-b111 E
-b0 W
-b1111000 F
-b10 &
-b10 Z
-b1010 .
-b1010 5
-b1010 9
+b11 '
+b11 X
+b1110 &
+b1110 [
+b0 $
+b0 a
+b110 !
+b110 j
+b1111000 P
+b10 0
+b10 d
+b1010 8
+b1010 ?
 b1010 C
-b1010 H
-b1010 K
-b1010 P
+b1010 M
+b1010 R
+b1010 U
+b1010 Z
+b1010 c
+b1010 f
+b1010 i
+b1100 6
+b1100 >
+b1100 B
+b1100 L
+b1100 Q
+b1100 T
+b1100 W
+b1100 Y
+b1100 \
+b1100 _
+b1100 b
+b1100 e
+b1100 h
+#100000
+b101 +
+b101 S
+b101 )
+b101 V
+b1111 "
+b1111 g
+b1010 .
+b1010 D
+b100 1
+b100 N
+b110 2
+b110 O
+b101 '
+b101 X
+b1010 &
+b1010 [
+b0 !
+b0 j
+b100 $
+b100 a
+b1100100 P
+b0 0
+b0 d
+b1010 6
+b1010 >
+b1010 B
+b1010 L
+b1010 Q
+b1010 T
+b1010 W
 b1010 Y
 b1010 \
 b1010 _
-b1100 ,
-b1100 4
-b1100 8
-b1100 B
-b1100 G
-b1100 J
-b1100 M
-b1100 O
-b1100 R
-b1100 U
-b1100 X
-b1100 [
-b1100 ^
-#100000
-b100 '
-b100 D
-b110 (
-b110 E
-b100 W
-b1100100 F
-b0 &
-b0 Z
-b1010 ,
-b1010 4
-b1010 8
-b1010 B
-b1010 G
-b1010 J
-b1010 M
-b1010 O
-b1010 R
-b1010 U
-b1010 X
-b1010 [
-b1010 ^
-01
-b1 /
-b1 V
+b1010 b
+b1010 e
+b1010 h
+0;
+b1 9
+b1 `
 #110000
-b101 W
-11
+b101 $
+b101 a
+1;
 #120000
-b1000 W
-01
-b10 /
-b10 V
+b1000 $
+b1000 a
+0;
+b10 9
+b10 `
 #130000
-b10 W
-11
+b10 $
+b10 a
+1;
 #140000
-b111 %
-b111 7
-1$
+b111 +
+b111 S
+b0 )
+b0 V
+b1000 "
+b1000 g
+b111 /
+b111 A
+1-
+b1000 .
+b1000 D
+b10 1
+b10 N
+b1000 2
+b1000 O
 b10 '
-b10 D
-b1000 (
-b1000 E
-b11 W
-b10111 6
-00
-b10000010 F
-b11 &
-b11 Z
-b1101 ,
-b1101 4
-b1101 8
+b10 X
+b1111 &
+b1111 [
+b11 $
+b11 a
+b111 !
+b111 j
+b10111 @
+0:
+b10000010 P
+b11 0
+b11 d
+b1101 6
+b1101 >
 b1101 B
-b1101 G
-b1101 J
-b1101 M
-b1101 O
-b1101 R
-b1101 U
-b1101 X
-b1101 [
-b1101 ^
+b1101 L
+b1101 Q
+b1101 T
+b1101 W
+b1101 Y
+b1101 \
+b1101 _
+b1101 b
+b1101 e
+b1101 h
 #170000
-b11111111111111111111111111111111 A
-b1010 @
-b0 ?
+b11111111111111111111111111111111 K
+b1010 J
+b0 I
 1#
-b1010 )
-b1010 >
-b1010 *
-b1010 =
-b11 3
-b11 <
-b1010 2
-b1010 ;
+b1010 3
+b1010 H
+b1010 4
+b1010 G
+b11 =
+b11 F
+b1010 <
+b1010 E
 #180000

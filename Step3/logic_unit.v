@@ -21,20 +21,20 @@ endmodule
 
 
 module and_4bit (Y, A, B);
-    output [3:0] Y;
+    output [3:0] Y; // wire type by default
     input [3:0] A, B;
     assign Y = A & B; 
 endmodule
 
 module nand_4bit (Y, A, B);
-    output [3:0] Y;
+    output [3:0] Y; // wire type by default
     input [3:0] A, B; 
 
     assign Y = ~(A & B);  
 endmodule
 
 module nor_4bit (Y, A, B);
-    output [3:0] Y;
+    output [3:0] Y; // wire type by default
     input [3:0] A, B;
     assign Y = ~(A | B); 
 endmodule
@@ -46,7 +46,7 @@ module not_4bit (Y, A);
 endmodule
 
 module or_4bit (Y, A, B);
-    output [3:0] Y;
+    output [3:0] Y; // wire type by default
     input [3:0] A, B;
     assign Y = A | B; 
 endmodule
@@ -59,13 +59,13 @@ module xnor_4bit (Y, A, B);
 endmodule
 
 module xor_4bit (Y, A, B);
-    output [3:0] Y; 
+    output [3:0] Y; // wire type by default
     input [3:0] A, B; 
     assign Y = A ^ B; 
 endmodule
 
 module logic_1bit (
-    output reg Y,
+    output reg Y,          // reg because assigned inside always block
     input A, B,           // Inputs
     input [2:0] control   // 3-bit control signal to select operation
 );
@@ -84,7 +84,7 @@ module logic_1bit (
 endmodule
 
 module logic_4bit (
-    output reg [3:0] Y,      // 4-bit output
+    output reg [3:0] Y,      // reg for procedural assignments
     input [3:0] A, B,        // 4-bit inputs
     input [2:0] control      // 3-bit control signal to select operation
 );
