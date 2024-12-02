@@ -1,64 +1,95 @@
+`timescale 1ns / 1ps
+`include "alu.v"
+`include "logic_unit.v"
+`include "shifter.v"
+
 module testbench;
-    // Common Inputs
-    reg [3:0] A, B;          // 4-bit inputs
-    reg carry_in;            // Carry-in for addition
-    reg [1:0] shift_amt;     // Shift amount (0-3)
-    reg shift_dir;           // Shift direction (0=left, 1=right)
-    reg [1:0] opcode;        // Operation code for control
 
-    // Common Outputs
-    wire [3:0] Y_logic;      // Logic output
-    wire [3:0] Sum;          // Addition output
-    wire carry_out;          // Carry-out for addition
-    wire [3:0] product_low;  // Multiplication low bits
-    wire [3:0] product_high; // Multiplication high bits
-    wire [3:0] quotient, remainder; // Division outputs
-    wire valid_div;          // Division valid flag
-    wire [3:0] Y_shift;      // Shift output
+    // Inputs for logical operations
+    reg A, B;
+    reg [3:0] A4, B4;
+    reg [1:0] amt;         // For shift amount
+    reg dir;               // For shift direction (0 = left, 1 = right)
+    reg [1:0] control;     // For controlling shift type (left/right)
+    reg carry_in;          // For arithmetic operations
+    reg [3:0] dividend, divisor;
 
-    // Instantiate Logic Modules
-    and_4bit u_and (.Y(Y_logic), .A(A), .B(B));
-    or_4bit u_or (.Y(Y_logic), .A(A), .B(B));
-    nand_4bit u_nand (.Y(Y_logic), .A(A), .B(B));
-    xor_4bit u_xor (.Y(Y_logic), .A(A), .B(B));
+    // Outputs for logical operations
+    wire Y;           // 1-bit wire
+    wire [3:0] Y4;    // 4-bit wire
 
-    // Instantiate Arithmetic Modules
-    addition u_add (.A(A), .B(B), .carry_in(carry_in), .Sum(Sum), .carry_out(carry_out));
-    multiplication u_mul (.A(A), .B(B), .product_low(product_low), .product_high(product_high));
-    division u_div (.dividend(A), .divisor(B), .quotient(quotient), .remainder(remainder), .valid(valid_div));
+    // Outputs for arithmetic operations
+    wire [3:0] Sum, SubResult, MulLow, MulHigh, DivQuotient, DivRemainder;
+    wire carry_out, valid;
 
-    // Instantiate Shift Modules
-    shift_2x4bit u_shift (.A(A), .amt(shift_amt), .dir(shift_dir), .Y(Y_shift));
+    // Instantiate logical operations modules
+    nand_1bit uut_nand1 (.Y(Y), .A(A), .B(B));
+    nor_1bit uut_nor1 (.Y(Y), .A(A), .B(B));
+    not_1bit uut_not1 (.Y(Y), .A(A));
 
-    // Testbench Logic
+    and_4bit uut_and4 (.Y(Y4), .A(A4), .B(B4));
+    nand_4bit uut_nand4 (.Y(Y4), .A(A4), .B(B4));
+    nor_4bit uut_nor4 (.Y(Y4), .A(A4), .B(B4));
+    not_4bit uut_not4 (.Y(Y4), .A(A4));
+    or_4bit uut_or4 (.Y(Y4), .A(A4), .B(B4));
+    xor_4bit uut_xor4 (.Y(Y4), .A(A4), .B(B4));
+    xnor_4bit uut_xnor4 (.Y(Y4), .A(A4), .B(B4));
+
+    // Instantiate shift modules
+    shift_1bit uut_shift1 (.Y(Y4), .A(A4));
+    shift_2x4bit uut_shift4 (.Y(Y4), .A(A4), .amt(amt), .dir(dir));
+
+    // Instantiate arithmetic operations modules
+    addition uut_addition (.A(A4), .B(B4), .carry_in(carry_in), .Sum(Sum), .carry_out(carry_out));
+    subtraction uut_subtraction (.Y(SubResult), .A(A4), .B(B4));
+    multiplication uut_multiplication (.A(A4), .B(B4), .product_low(MulLow), .product_high(MulHigh));
+    division uut_division (.dividend(dividend), .divisor(divisor), .quotient(DivQuotient), .remainder(DivRemainder), .valid(valid));
+
+    // Create waveform dump
     initial begin
-        $dumpfile("alu_tb.vcd");
-        $dumpvars(0, testbench);
+        $dumpfile("waveform.vcd");   // Name of the VCD file for the waveform
+        $dumpvars(0, testbench);     // Dump all variables in the testbench module
 
-        // Test Logic Operations
-        opcode = 0; A = 4'b1010; B = 4'b1100; #10;
-        opcode = 0; A = 4'b1111; B = 4'b0001; #10;
+        // Test Logical Operations
+        A = 1; B = 0;
+        #10; $display("nand_1bit: %b AND %b = %b", A, B, Y);
+        #10; $display("nor_1bit: %b OR %b = %b", A, B, Y);
+        #10; $display("not_1bit: NOT %b = %b", A, Y);
 
-        // Test Arithmetic Operations
-        opcode = 1; A = 4'b0110; B = 4'b0011; carry_in = 1'b0; #10;  // Addition
-        opcode = 1; A = 4'b0110; B = 4'b0011; carry_in = 1'b1; #10;  // Addition with carry
-        opcode = 1; A = 4'b1001; B = 4'b0010; #10;  // Multiplication
-        opcode = 1; A = 4'b1010; B = 4'b0010; #10;  // Division
+        A4 = 4'b1100; B4 = 4'b1010;
+        #10; $display("and_4bit: %b AND %b = %b", A4, B4, Y4);
+        #10; $display("nand_4bit: %b NAND %b = %b", A4, B4, Y4);
+        #10; $display("nor_4bit: %b NOR %b = %b", A4, B4, Y4);
+        #10; $display("not_4bit: NOT %b = %b", A4, Y4);
+        #10; $display("or_4bit: %b OR %b = %b", A4, B4, Y4);
+        #10; $display("xor_4bit: %b XOR %b = %b", A4, B4, Y4);
+        #10; $display("xnor_4bit: %b XNOR %b = %b", A4, B4, Y4);
 
         // Test Shift Operations
-        opcode = 2; A = 4'b1010; shift_amt = 2'b01; shift_dir = 1'b0; #10; // Left shift by 1
-        opcode = 2; A = 4'b1010; shift_amt = 2'b10; shift_dir = 1'b1; #10; // Right shift by 2
+        amt = 2'b01; dir = 1'b0; A4 = 4'b1010;   // Shift left by 1
+        #10; $display("shift_1bit (left): %b -> %b", A4, Y4);
+
+        amt = 2'b01; dir = 1'b1; A4 = 4'b1010;   // Shift right by 1
+        #10; $display("shift_1bit (right): %b -> %b", A4, Y4);
+
+        amt = 2'b10; dir = 1'b0; A4 = 4'b1010;   // Shift left by 2
+        #10; $display("shift_2x4bit (left): %b -> %b", A4, Y4);
+
+        amt = 2'b10; dir = 1'b1; A4 = 4'b1010;   // Shift right by 2
+        #10; $display("shift_2x4bit (right): %b -> %b", A4, Y4);
+
+        // Test Arithmetic Operations
+        A4 = 4'b1101; B4 = 4'b1010; carry_in = 1'b0;
+        #10; $display("addition: %b + %b = %b, carry_out = %b", A4, B4, Sum, carry_out);
+
+        #10; $display("subtraction: %b - %b = %b", A4, B4, SubResult);
+
+        #10; $display("multiplication: %b * %b = %b %b", A4, B4, MulHigh, MulLow);
+
+        dividend = 4'b1010; divisor = 4'b0011; // 10 / 3
+        #10; $display("division: %b / %b = quotient: %b, remainder: %b", dividend, divisor, DivQuotient, DivRemainder);
 
         $finish;
     end
 
-    // Monitor Output
-    always @(*) begin
-        case (opcode)
-            2'b00: $display("Logic Op: A=%b, B=%b, Y_logic=%b", A, B, Y_logic);
-            2'b01: $display("Arithmetic Op: A=%b, B=%b, Sum=%b, CarryOut=%b, ProductLow=%b, ProductHigh=%b, Quotient=%b, Remainder=%b, Valid=%b",
-                             A, B, Sum, carry_out, product_low, product_high, quotient, remainder, valid_div);
-            2'b10: $display("Shift Op: A=%b, ShiftAmt=%b, ShiftDir=%b, Y_shift=%b", A, shift_amt, shift_dir, Y_shift);
-        endcase
-    end
 endmodule

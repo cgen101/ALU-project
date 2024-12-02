@@ -1,3 +1,6 @@
+`ifndef LOGIC_UNIT_V
+`define LOGIC_UNIT_V
+
 module nand_1bit (Y, A, B);
     output Y; 
     input A, B; 
@@ -60,3 +63,43 @@ module xor_4bit (Y, A, B);
     input [3:0] A, B; 
     assign Y = A ^ B; 
 endmodule
+
+module logic_1bit (
+    output reg Y,
+    input A, B,           // Inputs
+    input [2:0] control   // 3-bit control signal to select operation
+);
+    always @(*) begin
+        case (control)
+            3'b000: Y = A & B;        // AND
+            3'b001: Y = !(A & B);     // NAND
+            3'b010: Y = A | B;        // OR
+            3'b011: Y = !(A | B);     // NOR
+            3'b100: Y = A ^ B;        // XOR
+            3'b101: Y = ~(A ^ B);     // XNOR
+            3'b110: Y = !A;           // NOT
+            default: Y = 0;           // Default to 0 if invalid control signal
+        endcase
+    end
+endmodule
+
+module logic_4bit (
+    output reg [3:0] Y,      // 4-bit output
+    input [3:0] A, B,        // 4-bit inputs
+    input [2:0] control      // 3-bit control signal to select operation
+);
+    always @(*) begin
+        case (control)
+            3'b000: Y = A & B;        // AND
+            3'b001: Y = ~(A & B);     // NAND
+            3'b010: Y = A | B;        // OR
+            3'b011: Y = ~(A | B);     // NOR
+            3'b100: Y = A ^ B;        // XOR
+            3'b101: Y = ~(A ^ B);     // XNOR
+            3'b110: Y = ~A;           // NOT (applies to both A)
+            default: Y = 4'b0000;     // Default to 0000 if invalid control signal
+        endcase
+    end
+endmodule
+
+`endif

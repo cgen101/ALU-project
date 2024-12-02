@@ -1,14 +1,26 @@
-module shift_1bit (Y, A);
-    output [3:0] Y;
-    input [3:0] A;
-    assign Y = A << 1;
+`ifndef SHIFTER_V
+`define SHIFTER_V
+
+module shift_1bit (
+    output reg [3:0] Y,     // Change Y to reg
+    input [3:0] A,          // 4-bit input
+    input [1:0] control     // 2-bit control signal for shift direction
+);
+    always @(*) begin
+        case (control)
+            2'b00: Y = A;               // No shift
+            2'b01: Y = A << 1;          // Left shift by 1
+            2'b10: Y = A >> 1;          // Right shift by 1
+            default: Y = 4'b0000;       // Default case
+        endcase
+    end
 endmodule
 
 module shift_2x4bit (
     input [3:0] A,
     input [1:0] amt,     
     input dir,           
-    output reg [3:0] Y
+    output reg [3:0] Y   // Keep Y as reg since it's assigned in an always block
 );
 
     always @(*) begin
@@ -31,3 +43,5 @@ module shift_2x4bit (
     end
 
 endmodule
+
+`endif

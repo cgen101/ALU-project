@@ -1,0 +1,296 @@
+$date
+	Mon Dec  2 12:09:23 2024
+$end
+$version
+	Icarus Verilog
+$end
+$timescale
+	1ps
+$end
+$scope module testbench $end
+$var wire 1 ! Y $end
+$var wire 4 " Y4 [3:0] $end
+$var wire 1 # valid $end
+$var wire 1 $ carry_out $end
+$var wire 4 % Sum [3:0] $end
+$var wire 4 & SubResult [3:0] $end
+$var wire 4 ' MulLow [3:0] $end
+$var wire 4 ( MulHigh [3:0] $end
+$var wire 4 ) DivRemainder [3:0] $end
+$var wire 4 * DivQuotient [3:0] $end
+$var reg 1 + A $end
+$var reg 4 , A4 [3:0] $end
+$var reg 1 - B $end
+$var reg 4 . B4 [3:0] $end
+$var reg 2 / amt [1:0] $end
+$var reg 1 0 carry_in $end
+$var reg 1 1 dir $end
+$var reg 4 2 dividend [3:0] $end
+$var reg 4 3 divisor [3:0] $end
+$scope module uut_addition $end
+$var wire 4 4 A [3:0] $end
+$var wire 4 5 B [3:0] $end
+$var wire 1 0 carry_in $end
+$var wire 5 6 full_sum [4:0] $end
+$var wire 1 $ carry_out $end
+$var wire 4 7 Sum [3:0] $end
+$upscope $end
+$scope module uut_and4 $end
+$var wire 4 8 A [3:0] $end
+$var wire 4 9 B [3:0] $end
+$var wire 4 : Y [3:0] $end
+$upscope $end
+$scope module uut_division $end
+$var wire 4 ; dividend [3:0] $end
+$var wire 4 < divisor [3:0] $end
+$var reg 4 = quotient [3:0] $end
+$var reg 4 > remainder [3:0] $end
+$var reg 4 ? temp_dividend [3:0] $end
+$var reg 4 @ temp_quotient [3:0] $end
+$var reg 1 # valid $end
+$var integer 32 A i [31:0] $end
+$upscope $end
+$scope module uut_multiplication $end
+$var wire 4 B A [3:0] $end
+$var wire 4 C B [3:0] $end
+$var wire 4 D product_low [3:0] $end
+$var wire 4 E product_high [3:0] $end
+$var wire 8 F full_product [7:0] $end
+$upscope $end
+$scope module uut_nand1 $end
+$var wire 1 + A $end
+$var wire 1 - B $end
+$var wire 1 ! Y $end
+$upscope $end
+$scope module uut_nand4 $end
+$var wire 4 G A [3:0] $end
+$var wire 4 H B [3:0] $end
+$var wire 4 I Y [3:0] $end
+$upscope $end
+$scope module uut_nor1 $end
+$var wire 1 + A $end
+$var wire 1 - B $end
+$var wire 1 ! Y $end
+$upscope $end
+$scope module uut_nor4 $end
+$var wire 4 J A [3:0] $end
+$var wire 4 K B [3:0] $end
+$var wire 4 L Y [3:0] $end
+$upscope $end
+$scope module uut_not1 $end
+$var wire 1 + A $end
+$var wire 1 ! Y $end
+$upscope $end
+$scope module uut_not4 $end
+$var wire 4 M A [3:0] $end
+$var wire 4 N Y [3:0] $end
+$upscope $end
+$scope module uut_or4 $end
+$var wire 4 O A [3:0] $end
+$var wire 4 P B [3:0] $end
+$var wire 4 Q Y [3:0] $end
+$upscope $end
+$scope module uut_shift1 $end
+$var wire 4 R A [3:0] $end
+$var wire 2 S control [1:0] $end
+$var reg 4 T Y [3:0] $end
+$upscope $end
+$scope module uut_shift4 $end
+$var wire 4 U A [3:0] $end
+$var wire 2 V amt [1:0] $end
+$var wire 1 1 dir $end
+$var reg 4 W Y [3:0] $end
+$upscope $end
+$scope module uut_subtraction $end
+$var wire 4 X A [3:0] $end
+$var wire 4 Y B [3:0] $end
+$var wire 4 Z Y [3:0] $end
+$upscope $end
+$scope module uut_xnor4 $end
+$var wire 4 [ A [3:0] $end
+$var wire 4 \ B [3:0] $end
+$var wire 4 ] Y [3:0] $end
+$upscope $end
+$scope module uut_xor4 $end
+$var wire 4 ^ A [3:0] $end
+$var wire 4 _ B [3:0] $end
+$var wire 4 ` Y [3:0] $end
+$upscope $end
+$upscope $end
+$enddefinitions $end
+#0
+$dumpvars
+bx `
+bx _
+bx ^
+bx ]
+bx \
+bx [
+bx Z
+bx Y
+bx X
+bx W
+bx V
+bx U
+b0 T
+bz S
+bx R
+bx Q
+bx P
+bx O
+bx N
+bx M
+bx L
+bx K
+bx J
+bx I
+bx H
+bx G
+bx F
+bx E
+bx D
+bx C
+bx B
+bx A
+bx @
+bx ?
+bx >
+bx =
+bx <
+bx ;
+bx :
+bx 9
+bx 8
+bx 7
+bx 6
+bx 5
+bx 4
+bx 3
+bx 2
+x1
+x0
+bx /
+bx .
+0-
+bx ,
+1+
+bx *
+bx )
+bx (
+bx '
+bx &
+bx %
+x$
+x#
+bx "
+x!
+$end
+#30000
+b1000 '
+b1000 D
+b111 (
+b111 E
+b0 W
+b1111000 F
+b10 &
+b10 Z
+b1010 .
+b1010 5
+b1010 9
+b1010 C
+b1010 H
+b1010 K
+b1010 P
+b1010 Y
+b1010 \
+b1010 _
+b1100 ,
+b1100 4
+b1100 8
+b1100 B
+b1100 G
+b1100 J
+b1100 M
+b1100 O
+b1100 R
+b1100 U
+b1100 X
+b1100 [
+b1100 ^
+#100000
+b100 '
+b100 D
+b110 (
+b110 E
+b100 W
+b1100100 F
+b0 &
+b0 Z
+b1010 ,
+b1010 4
+b1010 8
+b1010 B
+b1010 G
+b1010 J
+b1010 M
+b1010 O
+b1010 R
+b1010 U
+b1010 X
+b1010 [
+b1010 ^
+01
+b1 /
+b1 V
+#110000
+b101 W
+11
+#120000
+b1000 W
+01
+b10 /
+b10 V
+#130000
+b10 W
+11
+#140000
+b111 %
+b111 7
+1$
+b10 '
+b10 D
+b1000 (
+b1000 E
+b11 W
+b10111 6
+00
+b10000010 F
+b11 &
+b11 Z
+b1101 ,
+b1101 4
+b1101 8
+b1101 B
+b1101 G
+b1101 J
+b1101 M
+b1101 O
+b1101 R
+b1101 U
+b1101 X
+b1101 [
+b1101 ^
+#170000
+b11111111111111111111111111111111 A
+b1010 @
+b0 ?
+1#
+b1010 )
+b1010 >
+b1010 *
+b1010 =
+b11 3
+b11 <
+b1010 2
+b1010 ;
+#180000

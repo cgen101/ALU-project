@@ -1,3 +1,6 @@
+`ifndef ALU_V
+`define ALU_V
+
 module addition (
     input [3:0] A,         // 4-bit input A
     input [3:0] B,         // 4-bit input B
@@ -82,6 +85,68 @@ module division (
     end
 endmodule
 
+`ifndef ALU_V
+`define ALU_V
 
+module alu (
+    input [3:0] A, B,       // 4-bit inputs
+    input carry_in,         // Carry input for addition
+    input [1:0] shift_amt,  // 2-bit shift amount (unused in this case)
+    input shift_dir,        // Shift direction (unused in this case)
+    input [3:0] opcode,     // 4-bit control signal
+    output reg [3:0] Y,     // 4-bit result output (this is a reg)
+    output reg carry_out,   // Carry-out for addition (this is a reg)
+    output reg valid_div,   // Valid flag for division (this is a reg)
+    output reg [3:0] remainder, // Remainder from division (this is a reg)
+    output reg [3:0] product_low, // Multiplication low part (this is a reg)
+    output reg [3:0] product_high // Multiplication high part (this is a reg)
+);
 
+    // Intermediate wires for all module outputs
+    wire [3:0] arithmetic_out;
+    wire [3:0] quotient_out, remainder_out;
+    wire add_carry_out;
+
+    // Instantiate Arithmetic Modules
+    addition u_add (.A(A), .B(B), .carry_in(carry_in), .Sum(arithmetic_out), .carry_out(add_carry_out));
+    subtraction u_sub (.Y(arithmetic_out), .A(A), .B(B)); // Subtraction
+    multiplication u_mul (.A(A), .B(B), .product_low(product_low), .product_high(product_high));  // Multiplication
+    division u_div (.dividend(A), .divisor(B), .quotient(quotient_out), .remainder(remainder_out), .valid(valid_div)); // Division
+
+    always @(*) begin
+        // Default values (optional)
+        product_low = 4'b0000;
+        product_high = 4'b0000;
+        valid_div = 1'b0;
+
+        case (opcode[3:2])
+            2'b00: begin    // Arithmetic operations (addition/subtraction)
+                case (opcode[1:0])
+                    2'b00: begin
+                        Y = arithmetic_out;  // Addition
+                        carry_out = add_carry_out;
+                    end
+                    2'b01: Y = arithmetic_out;  // Subtraction
+                    default: Y = 4'b0000; // Default
+                endcase
+            end
+
+            2'b01: begin  // Multiplication
+                Y = product_low;  // Lower 4 bits of the product
+                product_high = product_high;  // Returning upper 4 bits if needed
+            end
+
+            2'b10: begin  // Division
+                Y = quotient_out;
+                remainder = remainder_out;
+                valid_div = 1'b1;
+            end
+
+            default: Y = 4'b0000; // Default case for unsupported operations
+        endcase
+    end
+endmodule
+
+`endif
+`endif
 
