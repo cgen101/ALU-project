@@ -12,21 +12,6 @@
 
 # Opcode Table for Logic Operations
 
-## 1-bit Logic Operations
-
-| Control (3 bits) | Operation    | Description                |
-|------------------|--------------|----------------------------|
-| 000              | AND          | `Y = A & B`                |
-| 001              | NAND         | `Y = !(A & B)`             |
-| 010              | OR           | `Y = A | B`                |
-| 011              | NOR          | `Y = !(A | B)`             |
-| 100              | XOR          | `Y = A ^ B`                |
-| 101              | XNOR         | `Y = ~(A ^ B)`             |
-| 110              | NOT          | `Y = !A`                   |
-| Default          | Default      | `Y = 0`                    |
-
-## 4-bit Logic Operations
-
 | Control (3 bits) | Operation    | Description                |
 |------------------|--------------|----------------------------|
 | 000              | AND          | `Y = A & B`                |
