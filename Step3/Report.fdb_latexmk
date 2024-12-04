@@ -1,6 +1,6 @@
 # Fdb version 4
-["pdflatex"] 1733285661.43035 "/Users/brianlee/Documents/architecture/ALU-project/Step3/Report.tex" "Report.pdf" "Report" 1733285663.07246 0
-  "/Users/brianlee/Documents/architecture/ALU-project/Step3/Report.tex" 1733285659.56204 6938 19894a02914564c0ee1906a5391f2fa5 ""
+["pdflatex"] 1733286085.35686 "/Users/brianlee/Documents/architecture/ALU-project/Step3/Report.tex" "Report.pdf" "Report" 1733286087.18808 0
+  "/Users/brianlee/Documents/architecture/ALU-project/Step3/Report.tex" 1733286085.07639 7137 066c4e503dab35e2bc71661b2cb28a5f ""
   "/opt/homebrew/Cellar/texlive/20240312_1/share/texmf-dist/fonts/enc/dvips/base/8r.enc" 1710106625 4850 80dc9bab7f31fb78a000ccfed0e27cab ""
   "/opt/homebrew/Cellar/texlive/20240312_1/share/texmf-dist/fonts/enc/dvips/cm-super/cm-super-t1.enc" 1710106625 2971 def0b6c1f0b107b3b936def894055589 ""
   "/opt/homebrew/Cellar/texlive/20240312_1/share/texmf-dist/fonts/map/fontname/texfonts.map" 1710106625 3524 cb3e574dea2d1052e39280babc910dc8 ""
@@ -114,10 +114,10 @@
   "/opt/homebrew/Cellar/texlive/20240312_1/share/texmf-dist/tex/latex/xcolor/xcolor.sty" 1710106625 55487 80a65caedd3722f4c20a14a69e785d8f ""
   "/opt/homebrew/Cellar/texlive/20240312_1/share/texmf-dist/web2c/texmf.cnf" 1710106625 41652 e14926ab86fde7902cad99d9eeaa5ca5 ""
   "/opt/homebrew/Cellar/texlive/20240312_1/share/texmf-var/web2c/pdftex/pdflatex.fmt" 1710106625 8221851 5146b755db1b51297976139fe7739199 ""
-  "Report.aux" 1733285662.9628 3541 d9412ad0791d8dac07def1a011f76dfb "pdflatex"
-  "Report.out" 1733285662.96377 1676 4fbb32dbf699435bf08175be3579dafb "pdflatex"
-  "Report.tex" 1733285659.56204 6938 19894a02914564c0ee1906a5391f2fa5 ""
-  "Report.toc" 1733285662.96405 996 8f5c48ae6ba762d676ab85df466e88b5 "pdflatex"
+  "Report.aux" 1733286087.07371 3848 29b295e362b462f71db301da8d134549 "pdflatex"
+  "Report.out" 1733286087.07477 1788 5831c3cd8ed05e678bbbd96b355647c4 "pdflatex"
+  "Report.tex" 1733286085.07639 7137 066c4e503dab35e2bc71661b2cb28a5f ""
+  "Report.toc" 1733286087.0751 1066 417cf69809b8c13e5f4319cd6e95a7dc "pdflatex"
   "alu.v" 1733243227.82872 4818 266100e6273d0b77ae14ac9420d3802b ""
   "logic_unit.v" 1733243227.82952 2649 19709b8aa59bfdb0cc2487b7f82d2b90 ""
   "pictures/1bitNor.PNG" 1733278010.84622 13792 22211929cb813b2c55610b51f2f3e1a4 ""
@@ -127,6 +127,7 @@
   "pictures/4bitNor.PNG" 1733278010.84752 15843 7f8f82ef5c504aa89f4a8db84f7cc160 ""
   "pictures/4bitShift.PNG" 1733278010.84775 19893 9a258f4568bd269e9e2e5effc2974f9a ""
   "pictures/4bitSubtraction.PNG" 1733278010.84822 13876 388fce0801cc4cdd33d6cdd9749cc7e0 ""
+  "pictures/Opcode.png" 1733285924.32277 126517 7b06d6ca5ad19ba25ad24c685122487d ""
   "report.sty" 1730210291.12599 7778 ad22ba0757d619a20fee2643b740f3f1 ""
   "shifter.v" 1733243227.83009 1328 52fdaf9bebdb2e9834ce6259a8167a7d ""
   "testbench.v" 1733243227.83028 4141 310a5a3835c2b2f9d1dade6f549e313d ""
