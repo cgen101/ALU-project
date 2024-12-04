@@ -1,0 +1,13 @@
+\contentsline {section}{\numberline {1}Introduction}{1}{section.1}%
+\contentsline {section}{\numberline {2}Logic circuit}{1}{section.2}%
+\contentsline {subsection}{\numberline {2.1}Logic Circuit code}{1}{subsection.2.1}%
+\contentsline {subsection}{\numberline {2.2}Logic Waveforms}{4}{subsection.2.2}%
+\contentsline {section}{\numberline {3}Alu circuit}{4}{section.3}%
+\contentsline {subsection}{\numberline {3.1}ALU circuit code}{5}{subsection.3.1}%
+\contentsline {subsection}{\numberline {3.2}ALU Waveforms}{8}{subsection.3.2}%
+\contentsline {section}{\numberline {4}Shift circuit}{9}{section.4}%
+\contentsline {subsection}{\numberline {4.1}Shifter circuit code}{9}{subsection.4.1}%
+\contentsline {subsection}{\numberline {4.2}Shift Waveform}{10}{subsection.4.2}%
+\contentsline {section}{\numberline {5}Testbench circuit}{11}{section.5}%
+\contentsline {subsection}{\numberline {5.1}Testbench circuit code}{11}{subsection.5.1}%
+\contentsline {section}{\numberline {6}Conclusion}{13}{section.6}%
